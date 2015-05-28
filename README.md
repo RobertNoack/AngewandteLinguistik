@@ -1,0 +1,2 @@
+# AngewandteLinguistik
+Seminarmodul Anwendungen Linguistische Informatik
