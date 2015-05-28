@@ -1,0 +1,10 @@
+schein
+zeugnis
+paß
+pass
+buch
+urkunde
+karte
+genehmigung
+zettel
+
