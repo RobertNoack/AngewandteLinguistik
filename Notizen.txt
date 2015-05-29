@@ -1,6 +1,68 @@
 Auffaelligkeiten / regex Ausdrücke:
 
-Namensfeld  Zeilenbeginn bis : ist 
-Geburtsort  : bis -- 
-Zeugnisse   -- bis .-
-.- Zeilenumbruch
+.-\s kennzeichnet Zeilenumbruch
+Zeilenendemarkierung beim letzten Element des Excel Tabellenfeldes nicht vorhanden, da diese immer abrupt abbrechen (Speicher voll?)
+
+Kommentare zu einzelnen Informationen in () (oder seltener []) geschrieben
+
+Strukturierter Aufbau
+
+1. Orginalstring
+
+2. 3 Bereiche separiert
+  Namensbereich 
+    Zeilenbeginn bis : (oder Zeilenende)
+    
+    Aufbau
+      Nachname, Vorname1 Vorname2: 
+  
+  Akademische Titel + Geburtsinformationen 
+    : bis --
+    
+    Akademische Titel mögliche Kennungen: 
+      Dr.
+      stud.
+    
+    Geburtsinformationen
+      beginnen mit
+        geb. Ort Datum 
+        aus -> Herkuft
+    
+    Aufbau
+      Titel 1, Titel 2, ..., Geburtsinformationen--  
+      :\sgeb(.){0,1}(\s\D*)\s((\d{1,2}.\d{1,2}.\d{4})*)--
+      
+  Dokumente
+    -- bis .- oder : bis .- falls keine 2. Bereich existiert
+    
+    mögliche Kennungen für die verschiedenen Dokumenttypen
+      (Z|z)eugnis(se{0,1})
+      buch
+      schein(e{0,1})
+      (P|p)rotokoll
+      genehmigung(en{0,1})
+      Zuweisung
+      Diplom
+      Quittung
+      
+    Aufbau
+      Dokument 1, Dokument 2, ..., Dokument n.- 
+
+
+
+Person
+  Vorname
+  Nachname
+  Akademischer Titel
+  Geburtsort                
+  Geburtsdatum
+  Herkunft
+  Religion
+  List<Dokument>
+  
+Dokument
+  Name
+  Jahr
+  Ausstellende Organisation
+  Anmerkungen
+  
