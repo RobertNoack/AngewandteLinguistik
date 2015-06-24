@@ -35,8 +35,16 @@ def removing_whitspaces(dict):
 
 def to_json(fileobject, text_file_name='testJsonOutput'):
 
-    text_file = open('text_file_name', 'w')
-    json.dump(fileobject, text_file, True)
+    #print ("in JASON:",fileobject)
+    #text_file = open('text_file_name', 'w')
+    #json.dump(fileobject, text_file, True)
+    #for i in fileobject:
+        #print ("+++",i)
+    #json.dumps(fileobject, text_file, True)
+    #print ("+++++",json.dumps(fileobject))
+
+    with open(text_file_name, 'w') as outfile:
+        json.dump(fileobject, outfile,indent=2,ensure_ascii=False)
 
 def get_data_sets(string):
     data_set_array = re.split(r'\.-\s',string)
@@ -196,18 +204,9 @@ def fill_dict(textfile_object,dictionary_list):
         dict = {}
         print ("\nObject under investigation:", listitem)
         getting_name(listitem,dict)
-        #academic_title(listitem,dict)
-        #print('rest of listitems: ',value_list)
         get_birth_place(listitem,dict)
-        #print ("dictionary after get_birth_place",dict)
-        
-        
-        #print('rest of listitems: ',listitem)
         get_certificate(listitem,dict)
-        #birthplace_val =  re.sub(r'geb.|geb|geboren','',value_list[2]) 
-        #print(dict) 
         list_of_dicts.append(dict)
-        
 
         #print ("list of dicts: ",listitem)
         print ("prename \t surname \t birthplace \t add.birth.info \t certificate" )
