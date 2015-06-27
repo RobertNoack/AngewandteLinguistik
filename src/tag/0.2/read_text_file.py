@@ -23,7 +23,7 @@
 #  
 #  
 
-import json
+import json,collections
 import re,sys
 
 def get_key_value_pair(fileobject):
@@ -43,8 +43,18 @@ def to_json(fileobject, text_file_name='testJsonOutput'):
     #json.dumps(fileobject, text_file, True)
     #print ("+++++",json.dumps(fileobject))
 
+
     with open(text_file_name, 'w') as outfile:
-        json.dump(fileobject, outfile,indent=2,ensure_ascii=False)
+        for i in fileobject:
+#            json.dump(i['surname'],outfile,indent=2,ensure_ascii=False)   
+#            json.dump(i['prename'],outfile,indent=2,ensure_ascii=False)   
+#            json.dump(i['birthplace'],outfile,indent=2,ensure_ascii=False)   
+#            json.dump(i['additional_information_of_birthplace'],outfile,indent=2,ensure_ascii=False)   
+#            json.dump(i['certificate'],outfile,indent=2,ensure_ascii=False)   
+#            json.dump(i['object_under_onvestigation'],outfile,indent=2,ensure_ascii=False)   
+
+ 
+            json.dump(i, outfile,indent=2,ensure_ascii=False)
 
 def get_data_sets(string):
     data_set_array = re.split(r'\.-\s',string)
@@ -60,7 +70,7 @@ def check_for_date(__substring,__substring_additional_info ):
         __look_for_suffix=True
         __substring=__substring[:__place_of_date.start()] + __substring [__place_of_date.end():]
         #__substring=re.sub(__date_regex,'',__substring)
-        print ("----------------",__substring)
+        #print ("----------------",__substring)
     return ([__substring,__substring_additional_info, __look_for_suffix ])
 
 def get_birth_place(value,dict):
@@ -77,7 +87,7 @@ def get_birth_place(value,dict):
         
         __regex_4_add_information=r'(,)+|(\Wb.\W)+|(\Wb\W)+|(Bez.)+|(bez.)+'
         __birthplace_delimiter = re.search(__regex_4_add_information,__substring)
-        print (__birthplace_delimiter )
+        #print (__birthplace_delimiter )
 
 
         if __birthplace_delimiter is not None:
@@ -136,7 +146,7 @@ def get_birth_place(value,dict):
         #value_list.pop(__counter-1)
         
     except IndexError:
-        print("Did not found informations about birthplace \':\' ! ", file=sys.stderr)
+        #print("Did not found informations about birthplace \':\' ! ", file=sys.stderr)
         dict['birthplace'] = None
         dict['additional_information_of_birthplace'] = None
     return 0
@@ -163,8 +173,8 @@ def get_certificate(value,dict):
     __look_4_zeugnis = value.find('--')
     #print("certificates:",value)
     if __look_4_zeugnis != -1:
-        print ("############found certificate!############")
-        print (value[__look_4_zeugnis+2:].strip() )
+        #print ("############found certificate!############")
+        #print (value[__look_4_zeugnis+2:].strip() )
         dict['certificate']=value[__look_4_zeugnis+2:].strip() 
         #value='asd'
         #value_list.pop(__counter)
@@ -191,35 +201,38 @@ def academic_title(value_string,dict):
     __substring=re.split(':',value_string,1)
     __substring=__substring[:1]
     __substring=re.split('--',__substring[1],1)
-    print ("academic title: ",__substring)
+    #print ("academic title: ",__substring)
 
 
-def fill_dict(textfile_object,dictionary_list):
+def fill_dict(textfile_object):
     list_of_dicts = []
-    print ("\n------------ begin of array---------------\n")
+    #print ("\n------------ begin of array---------------\n")
     data_set_array=get_data_sets(textfile_object)
-    print (data_set_array,"\n------------ end of array---------------\n")
+    #print (data_set_array,"\n------------ end of array---------------\n")
     for listitem in data_set_array:
         
-        dict = {}
-        print ("\nObject under investigation:", listitem)
+        dict = collections.OrderedDict()
+        #print ("\nObject under investigation:", listitem)
+        org_listitem = listitem
         getting_name(listitem,dict)
         get_birth_place(listitem,dict)
         get_certificate(listitem,dict)
         list_of_dicts.append(dict)
-
+        dict['object_under_onvestigation'] = listitem 
         #print ("list of dicts: ",listitem)
-        print ("prename \t surname \t birthplace \t add.birth.info \t certificate" )
-        for listitem in list_of_dicts:
-            print (listitem['prename'],"\t", listitem['surname'],"\t", listitem['birthplace'],"\t", listitem['additional_information_of_birthplace'], \
-            "\t",listitem['certificate']) 
+        #print ("prename \t surname \t birthplace \t add.birth.info \t certificate" )
+        #for listitem in list_of_dicts:
+        #    print (listitem['prename'],"\t", listitem['surname'],"\t", listitem['birthplace'],"\t", listitem['additional_information_of_birthplace'], \
+        #    "\t",listitem['certificate']) 
         
-        for listitem in list_of_dicts:
-            print ("original list: ", listitem)
-
+        #for listitem in list_of_dicts:
+        #    print ("original list: ", listitem)
+        if org_listitem != listitem:
+            print("!!!! CHANGED LISTITEM!!! ",listitem , file=sys.stderr)
+            sys.exit 
         del dict
         #print ("left_arguments: : ",listitem)
-        print ("\n\n\n\n")       
+        #print ("\n\n\n\n")       
 
     #removing_whitspaces(dict)
     return list_of_dicts
@@ -233,9 +246,9 @@ if __name__ == '__main__':
     dictionary_list = []
     file_object = open('personendaten.txt', 'r')
     for line in file_object:
-        print(line, '')
-        dict = fill_dict(line,dictionary_list) 
-        to_json(dict)
-        if input("end?") == 'y':
-            break
-
+        #print(line, '')
+        dictionary_list.append(fill_dict(line))
+        #if input("end?") == 'y':
+        #    break
+    to_json(dictionary_list)
+    #print (dictionary_list) 
