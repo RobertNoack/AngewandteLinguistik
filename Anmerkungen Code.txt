@@ -1,0 +1,20 @@
+Akademische Titel beachten mit regex 
+ Notizen Zeile 19 - 33
+ Bsp Zeile 131
+ 
+Geburtsdatum als eigenes Feld und nicht Geburtsortzusatz, Erkennung mit regex auf Datum in Bereich 2
+ Bsp Zeile 2
+ 
+Unterscheidung Bereich 1 2 3 und nur Bereich 1 3
+ Notizen Zeile 35
+ Suche ob -- im Originalstring vorkommt, wenn nicht dann nur Bereich 1 und 3
+ Bsp Zeile 74 
+ 
+Unterscheidung ceritficate in die Verschiedenen Dokumenttypen
+ Notizen Zeile 38 - 46
+
+ 
+ 
+ 
+
+ 
