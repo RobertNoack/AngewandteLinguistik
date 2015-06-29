@@ -19,16 +19,62 @@ Unterscheidung ceritficate in die Verschiedenen Dokumenttypen
  
 birthplace Worte löschen wie (auch in additional_information"
  aus 	134
- zu 	141
+ zu		141
  
  auf Abstand achten \sWort\s 
  Bsp Fehler: 
   261 	"birthplace": "Rehlgen",
   264	"object_under_onvestigation": "Ammon, Carl: aus Rehlingen--
  
+  494	"birthplace": "Kösl",
+  497	"object_under_onvestigation": "Bauck, Franz Albert Karl: aus Köslin--
  
+  751	"birthplace": "Klosdorf  Siebenbürgen",
+  754	"object_under_onvestigation": "Berwerth, Friedrich: geb. 1.7.1856 in Klosdorf in Siebenbürgen--
+ 
+  1090	"additional_information_of_birthplace": "geb. in Saalfeld in Ostpreußen",
+
+Nur ein Name, 
+  1344	"surname": "Damianos",
+		"prename": "Damianos",
+		"object_under_onvestigation": "Damianos:
+ 
+  
+  
 Generelle Fehler:
+ Mehrere Objekte [] durch die Zellen-Zeilentrennung Bsp 274
+
  67 	"surname": "1von Adamski",
  232 	"prename": "Paul aus Altenburg",
  252	"prename": "Dionysius Graf",
+ 432	"additional_information_of_birthplace": "Reg.  Münster",
+		"object_under_onvestigation": "Bansmann, Rudolf: aus Koesfeld, Reg. Bez. Münster--
+ 436	"surname": "Baron",
+ 502	"birthplace": "Thumsenreuth 21.8. 1846",
+ 685	"surname": "Abgangszeugnis Universität Leipzig 1897",
+ 1386	"birthplace": "20.10.  Ferchland",
+ 1694	"object_under_onvestigation": "Ehrlich, Moritz gotthold:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
  
