@@ -2,19 +2,33 @@ Akademische Titel beachten mit regex
  Notizen Zeile 19 - 33
  Bsp Zeile 131
  
+ 
 Geburtsdatum als eigenes Feld und nicht Geburtsortzusatz, Erkennung mit regex auf Datum in Bereich 2
  Bsp Zeile 2
+ 
  
 Unterscheidung Bereich 1 2 3 und nur Bereich 1 3
  Notizen Zeile 35
  Suche ob -- im Originalstring vorkommt, wenn nicht dann nur Bereich 1 und 3
  Bsp Zeile 74 
  
+ 
 Unterscheidung ceritficate in die Verschiedenen Dokumenttypen
  Notizen Zeile 38 - 46
 
  
+birthplace Worte löschen wie (auch in additional_information"
+ aus 	134
+ zu 	141
+ 
+ auf Abstand achten \sWort\s 
+ Bsp Fehler: 
+  261 	"birthplace": "Rehlgen",
+  264	"object_under_onvestigation": "Ammon, Carl: aus Rehlingen--
  
  
-
+Generelle Fehler:
+ 67 	"surname": "1von Adamski",
+ 232 	"prename": "Paul aus Altenburg",
+ 252	"prename": "Dionysius Graf",
  
