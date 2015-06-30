@@ -2,7 +2,8 @@ import sys
 import urllib
 import urllib.parse
 import urllib.request
-import simplejson as json
+import json
+
 DOMAIN = 'http://api.geonames.org/'
 USERNAME = 'asv2015' #username
 
@@ -24,8 +25,9 @@ class Location(object):
 
 def fetchJson(method, params):
 	uri = DOMAIN + '%s?%s' % (method, urllib.parse.urlencode(params))
-	resource = urllib.request.urlopen(uri).readlines()
-	js = json.loads(resource[0])
+	response = urllib.request.urlopen(uri)
+	content = response.read()
+	js = json.loads(content.decode("utf8"))
 	return js
 
 def getLocation(city):
