@@ -26,7 +26,7 @@
 import json,collections
 import re,sys
 import geonames
-#import certificates as ce
+import certificates as ce
 
 def get_key_value_pair(fileobject):
     print ("test")
@@ -222,9 +222,26 @@ def get_certificate(value,dict,jump_to_certificate ):
     else:
         certificate = None
 
-    #ce.Certificate.getCertificates(certificate)
+    jsonCertifications = []
+    for cert in ce.Certificate.getCertificates(certificate):
+        print("source: " + cert.getSource())
+        print("name: " + cert.getName())
+        if cert.getType() is not None:
+            print("type: " + cert.getType())
+        print("year: " + str(cert.getYear()))
+        loc = cert.getLocation()
+        if(loc is not None):
+            print("location: " + loc.getName())
 
-    dict['certificate'] = certificate
+        jsonCert = {'source': cert.getSource(), 'name': cert.getName()}
+        if cert.getType() is not None:
+            jsonCert['type'] = cert.getType()
+        if cert.getYear() is not None:
+            jsonCert['year'] = cert.getYear()
+        
+        jsonCertifications.append(jsonCert)
+
+    dict['certificate'] = jsonCertifications
 
 def getting_name(value_list,dict):
     """ get everything before the colon """
