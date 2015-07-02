@@ -3,6 +3,7 @@ import urllib
 import urllib.parse
 import urllib.request
 import json
+import collections
 
 DOMAIN = 'http://api.geonames.org/'
 USERNAME = 'asv2015' #username
@@ -14,6 +15,8 @@ class Location(object):
 		self.name = name
 		self.lng = lng
 		self.lat = lat
+
+	locationCache = collections.OrderedDict()
 
 	def getName(self):
 		return self.name
@@ -35,22 +38,28 @@ class Location(object):
 		return js
 
 	def getLocation(city):
-		method = 'postalCodeSearchJSON'
-		params = {'placename':city, 'username':USERNAME}
-		results = Location.fetchJson(method, params)
-
-		if('postalCodes' in results):
-			if(len(results['postalCodes']) > 0):
-				postalCode = results['postalCodes'][0]
-				if ('placeName' in postalCode and 'lng' in postalCode and 'lat' in postalCode):
-					return Location(postalCode['placeName'], postalCode['lng'], postalCode['lat'])
-			else:
-				if ' ' in city:
-					for part in city.split(' '):
-						return Location.getLocation(part)
-						if(l is not None):
-							return l
-
+		if city in Location.locationCache:
+			return Location.locationCache[city]
+		else:
+			method = 'postalCodeSearchJSON'
+			params = {'placename':city, 'username':USERNAME}
+			try:
+				results = Location.fetchJson(method, params)
+				if('postalCodes' in results):
+					if(len(results['postalCodes']) > 0):
+						postalCode = results['postalCodes'][0]
+						if ('placeName' in postalCode and 'lng' in postalCode and 'lat' in postalCode):
+							loc = Location(postalCode['placeName'], postalCode['lng'], postalCode['lat'])
+							Location.locationCache[city] = loc
+							return loc
+					else:
+						if ' ' in city:
+							for part in city.split(' '):
+								return Location.getLocation(part)
+								if(l is not None):
+									return l
+			except urllib.error.HTTPError:
+				print('cityParseError (' + city + ')')
 		return None
 
 if __name__ == '__main__':

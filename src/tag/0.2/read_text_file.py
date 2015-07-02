@@ -25,6 +25,7 @@
 
 import json,collections
 import re,sys
+import geonames
 
 def get_key_value_pair(fileobject):
     print ("test")
@@ -116,7 +117,12 @@ def get_birth_place(value,dict):
                 __substring_additional_info=__substring
                 __FROM_LEIPZIG=1         
         if not __FROM_LEIPZIG:
-                dict['birthplace'] = __substring
+               dict['birthplace'] = __substring
+               loc = geonames.Location.getLocation(__substring)
+                  
+               if(loc is not None):
+                  dict['birthplace_parsed'] = {"latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl()}
+
         if __look_for_suffix==True:
             ##new substring    
              
@@ -209,6 +215,7 @@ def fill_dict(textfile_object):
     #print ("\n------------ begin of array---------------\n")
     data_set_array=get_data_sets(textfile_object)
     #print (data_set_array,"\n------------ end of array---------------\n")
+
     for listitem in data_set_array:
         
         dict = collections.OrderedDict()
