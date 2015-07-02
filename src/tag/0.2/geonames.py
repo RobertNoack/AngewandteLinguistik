@@ -11,12 +11,16 @@ MAPS = 'https://maps.google.de/maps?q='
 
 class Location(object): 
 
-	def __init__(self, name, lng, lat):
+	def __init__(self, geonameId, name, lng, lat):
+		self.geonameId = geonameId
 		self.name = name
 		self.lng = lng
 		self.lat = lat
 
 	locationCache = collections.OrderedDict()
+
+	def getGeonameId(self):
+		return self.geonameId
 
 	def getName(self):
 		return self.name
@@ -41,15 +45,15 @@ class Location(object):
 		if city in Location.locationCache:
 			return Location.locationCache[city]
 		else:
-			method = 'postalCodeSearchJSON'
-			params = {'placename':city, 'username':USERNAME}
+			method = 'searchJSON'
+			params = {'q':city, 'maxRows':1, 'username':USERNAME}
 			try:
 				results = Location.fetchJson(method, params)
-				if('postalCodes' in results):
-					if(len(results['postalCodes']) > 0):
-						postalCode = results['postalCodes'][0]
-						if ('placeName' in postalCode and 'lng' in postalCode and 'lat' in postalCode):
-							loc = Location(postalCode['placeName'], postalCode['lng'], postalCode['lat'])
+				if('totalResultsCount' in results):
+					if(results['totalResultsCount'] > 0):
+						geoname = results['geonames'][0]
+						if ('geonameId' in geoname and 'name' in geoname and 'lng' in geoname and 'lat' in geoname):
+							loc = Location(geoname['geonameId'], geoname['name'], geoname['lng'], geoname['lat'])
 							Location.locationCache[city] = loc
 							return loc
 					else:
@@ -58,6 +62,7 @@ class Location(object):
 								return Location.getLocation(part)
 								if(l is not None):
 									return l
+				
 			except urllib.error.HTTPError:
 				print('cityParseError (' + city + ')')
 		return None
@@ -68,6 +73,6 @@ if __name__ == '__main__':
 		if(l is None):
 			print('Not found')
 		else:
-			print("name: " + l.getName() + " lng: " + str(l.getLng()) + " lat: " + str(l.getLat()) + " url: " + str(l.getUrl()))
+			print("geonameId:" + str(l.getGeonameId()) + " name: " + l.getName() + " lng: " + str(l.getLng()) + " lat: " + str(l.getLat()) + " url: " + str(l.getUrl()))
 	else:
 		print('No location')

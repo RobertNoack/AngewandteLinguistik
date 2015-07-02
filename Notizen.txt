@@ -10,15 +10,6 @@ Strukturierter Aufbau
 1. Orginalstring
 
 2. 3 Bereiche separiert
-  Namensbereich 
-    Zeilenbeginn bis : (oder Zeilenende)
-    
-    Aufbau
-      Nachname, Vorname1 Vorname2: 
-  
-  Akademische Titel + Geburtsinformationen 
-    : bis --
-    
     Akademische Titel mögliche Kennungen: 
       Dr.
       stud.
