@@ -2,5 +2,5 @@
 \select@language {german}
 \beamer@sectionintoc {2}{Einf\IeC {\"u}hrung}{3}{0}{1}
 \beamer@sectionintoc {3}{Ausgangsdaten}{5}{0}{2}
-\beamer@sectionintoc {4}{Quelldatenfehler}{8}{0}{3}
-\beamer@sectionintoc {5}{Verwendete Verfahren}{9}{0}{4}
+\beamer@sectionintoc {4}{Quelldatenfehler}{11}{0}{3}
+\beamer@sectionintoc {5}{Verwendete Verfahren}{12}{0}{4}
