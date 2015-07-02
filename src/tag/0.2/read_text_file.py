@@ -25,6 +25,7 @@
 
 import json,collections
 import re,sys
+import geonames
 
 def get_key_value_pair(fileobject):
     print ("test")
@@ -134,21 +135,31 @@ def get_birth_place_and_academic_title(value,dict):
             __substring = list[0]
             __substring_additional_info= list[1]  
             __look_for_suffix = list[2]
+            
            #print ("----+++++--------",__substring_additional_info) 
         #__substring = value[(__colon_place+1):]
         __cut_prefix_string=r'(geb.)+|(aus)+|(in)'
+
         __substring= re.sub(__cut_prefix_string,'',__substring)
         __substring=__substring.strip()
         #print ("---------", __substring,"--------",__substring_additional_info )
+        
         list_leipzig_suburb=open('liste_leipziger_vororte_clean','r')
         for item in list_leipzig_suburb:
             if item.strip().lower() == __substring.lower():
-                dict['birthplace']='Leipzig'
+                dict['birthplace'] = {"source": __substring, "name": "Leipzig"}
                 __look_for_suffix=True
                 __substring_additional_info=__substring
                 __FROM_LEIPZIG=1         
         if not __FROM_LEIPZIG:
-                dict['birthplace'] = __substring
+               print('get location "' + __substring + '"...')
+               loc = geonames.Location.getLocation(__substring)
+                  
+               if(loc is None):
+                  dict['birthplace'] = {"source": __substring, "name": __substring}
+               else:
+                  dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl()}
+
         if __look_for_suffix==True:
             ##new substring    
              
@@ -195,19 +206,24 @@ def get_certificate(value,dict,jump_to_certificate ):
     #print (jump_to_certificate)
     __look_4_zeugnis = value.find('--')
     #print("certificates:",value)
+    
     if __look_4_zeugnis != -1: 
         #print ("############found certificate!############")
         #print (value[__look_4_zeugnis+2:].strip() )
-        dict['certificate']=value[__look_4_zeugnis+2:].strip() 
+        certificate = value[__look_4_zeugnis+2:].strip() 
         #value='asd'
         #value_list.pop(__counter)
     #__counter+=1
     elif jump_to_certificate:
         #print ("HALLO")
         __look_4_zeugnis = value.find(':')
-        dict['certificate']=value[__look_4_zeugnis+1:].strip() 
+        certificate = value[__look_4_zeugnis+1:].strip() 
     else:
-        dict['certificate']=None 
+        certificate = None
+
+    print(certificate)
+
+    dict['certificate'] = certificate
 
 def getting_name(value_list,dict):
     """ get everything before the colon """
@@ -230,13 +246,13 @@ def academic_title(value_string,dict):
     __substring=re.split('--',__substring[1],1)
     #print ("academic title: ",__substring)
 
-
 def fill_dict(textfile_object):
     jump_to_certificate = 0
     list_of_dicts = []
     #print ("\n------------ begin of array---------------\n")
     data_set_array=get_data_sets(textfile_object)
     #print (data_set_array,"\n------------ end of array---------------\n")
+
     for listitem in data_set_array:
         
         dict = collections.OrderedDict()
