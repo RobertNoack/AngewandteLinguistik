@@ -50,15 +50,22 @@ class Certificate(object):
 		for part in value.split(','):
 			cert = Certificate(part)
 
-			match = re.match(r'.*(\d{4}).*', part)
+			match = re.match(r'.*(\d{4}([/]\d{2})*).*', part)
 
 			if match:
 				cert.setYear(match.group(1))
 				part = part.replace(match.group(1), '')
 
-			#loc = geonames.Location.getLocation(part)
-			#if(loc is not None):
-				#cert.setLocation(loc)
+			part = part.replace('.', '').strip()
+
+			if(' ' in part):
+				temp = part.split(' ')
+				temp = temp[len(temp) - 1]
+				if(len(temp) > 3):
+					loc = geonames.Location.getLocation(temp)
+					if(loc is not None):
+						#print(part + ' => ' + loc.getName())
+						cert.setLocation(loc)
 			
 			temp = part.lower()
 			if 'zeugnis' in temp:

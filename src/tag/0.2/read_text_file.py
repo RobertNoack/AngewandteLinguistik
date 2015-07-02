@@ -224,20 +224,19 @@ def get_certificate(value,dict,jump_to_certificate ):
 
     jsonCertifications = []
     for cert in ce.Certificate.getCertificates(certificate):
-        print("source: " + cert.getSource())
-        print("name: " + cert.getName())
-        if cert.getType() is not None:
-            print("type: " + cert.getType())
-        print("year: " + str(cert.getYear()))
+        #print("source: " + cert.getSource())
+        #print("year: " + str(cert.getYear()))
         loc = cert.getLocation()
-        if(loc is not None):
-            print("location: " + loc.getName())
+        #if(loc is not None):
+            #print("location: " + loc.getName())
 
         jsonCert = {'source': cert.getSource(), 'name': cert.getName()}
         if cert.getType() is not None:
             jsonCert['type'] = cert.getType()
         if cert.getYear() is not None:
             jsonCert['year'] = cert.getYear()
+        if(loc is not None):
+            jsonCert['location'] = {"geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl()}
         
         jsonCertifications.append(jsonCert)
 
