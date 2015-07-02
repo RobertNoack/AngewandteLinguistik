@@ -1,6 +1,6 @@
 \documentclass[12pt]{beamer}
 \usetheme{Frankfurt}
-\usecolortheme{seahorse}
+%\usecolortheme{seahorse}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
 \usepackage[T1]{fontenc}
@@ -8,17 +8,21 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+
+
 \author{Robert Noack, Stefan Schaub, Ramon Bernert}
-\title{Themenbereich 8: \\Daten des Universitätsarchivs}
+\title{\textbf{Themenbereich 8: \\Daten des Universitätsarchivs}}
 
 %\setbeamercovered{transparent} 
-%\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{navigation symbols}{} 
 %\logo{} 
 %\institute{} 
 \date{6. Juli 2015} 
 %\subject{} 
-\begin{document}
 
+
+\begin{document}
+\begin{large}
 \section*{}
 \begin{frame}
 \titlepage
@@ -45,10 +49,61 @@
 \end{frame}
 
 \begin{frame}{Struktur der Ausgangsdaten}
+\begin{itemize}
+\item 
+\item 3 Infromationsbereiche
+ \begin{enumerate}
+  \item Namensbereich
+  \item persönliche Informationen
+  \item Dokumente
+ \end{enumerate}
+\end{itemize}
 
+ 
+ \vspace*{\fill}
+ \begin{block}{Beispiel}
+ \normalsize Namensbereich: persönliche Informationen-{}- Dokumente.-
+ \end{block}
 \end{frame} 
 
+\begin{frame}{Namensbereich}
+ Nachname, Vorname$_1$ Vorname$_2$ ... Vorname$_n$:
+
+ \vspace*{\fill}
+ \begin{block}{Beispiel}
+ \normalsize Ahnemüller, Gottlob Wilhelm:
+ \end{block}
+\end{frame}
+
+
+\begin{frame}{persönliche Informationen}
+ akademischer Titel, Geburtsort Geburtsjahr--
+
+ \vspace*{\fill}
+ \begin{block}{Beispiele}
+  \normalsize
+  \begin{itemize}
+   \item stud. oecon., geb. Kiel 5.9.1897-{}-
+   \item test
+  \end{itemize}
+ \end{block}
+\end{frame}
+
+
+\begin{frame}{Dokumente}
+
+
+
+ \vspace*{\fill}
+ \begin{block}{Beispiel}
+ \normalsize text hier einfügen
+ \end{block}
+\end{frame}
+
+
 \begin{frame}{Gewünschte Struktur}
+
+
 
 \end{frame}
 
@@ -56,11 +111,20 @@
 \section{Quelldatenfehler}
  \subsection*{~}
 \begin{frame}{Fehler in den Ausgangsdaten}
-
+ \begin{itemize}
+  \item bsp1
+  
+ \end{itemize}
 \end{frame}
 
 \section{Verwendete Verfahren}
  \subsection*{~}
+\begin{frame}{Ablauf}
+ \begin{itemize}
+  \item regex Filter für die 3 Bereiche
+ \end{itemize}
+\end{frame}
+
 \begin{frame}{Python Code}
 
 \end{frame}
@@ -69,11 +133,18 @@
 
 \end{frame}
 
+\begin{frame}{zukünftige Verfahren}
+ \begin{itemize}
+   \item 
+ \end{itemize}
+\end{frame}
+
+
 \section*{}
 \begin{frame}
 \centering
 {\Large Vielen Dank für Ihre Aufmerksamkeit. \\ Noch Fragen?}
 \end{frame}
 
-
+\end{large}
 \end{document}
