@@ -78,6 +78,12 @@ def get_birth_place(value,dict):
     __look_for_suffix=False
     __counter=0
     __substring_additional_info=''
+    ## if no -- was found, there are no birthplace informations
+    if value.find('--') == -1:
+        #print ("jumping to certificate",dict['surname']," ",dict['prename'])
+        dict['additional_information_of_birthplace'] = None 
+        dict['birthplace'] = None
+        return -2
     try:
         __substring=re.split(':',value,1)
         __substring=re.split('--',__substring[1],1)
@@ -133,7 +139,7 @@ def get_birth_place(value,dict):
            
             dict['additional_information_of_birthplace'] = __substring_additional_info
             
-            return 1
+            return 2
         else:
             dict['additional_information_of_birthplace'] = None 
             #if __terminate_char:
@@ -149,17 +155,13 @@ def get_birth_place(value,dict):
         #print("Did not found informations about birthplace \':\' ! ", file=sys.stderr)
         dict['birthplace'] = None
         dict['additional_information_of_birthplace'] = None
-    return 0
+        return -1
+    return 1
 
 def get_surname(value_list,dict):
     __substring=re.split(',',value_list)
     try:
         dict['surname'] = __substring[0]
-        #print("value list before:",value_list)
-        #value_list=value_list.lstrip('*,')
-        #print ("\n", value_list.lstrip(r'\W,'),"\n\n")
-        #print("value list after:",value_list)
-        #print ("rest of the list: ",value_list,"\nsurname: ",__substring[0])
     except IndexError:
         print("No surname was found! ", file=sys.stderr)
         
@@ -168,17 +170,22 @@ def get_prename(value_list,dict):
     value_list=value_list.strip()
     dict['prename'] = value_list
 
-def get_certificate(value,dict):
+def get_certificate(value,dict,jump_to_certificate ):
     #__counter = 0
+    #print (jump_to_certificate)
     __look_4_zeugnis = value.find('--')
     #print("certificates:",value)
-    if __look_4_zeugnis != -1:
+    if __look_4_zeugnis != -1: 
         #print ("############found certificate!############")
         #print (value[__look_4_zeugnis+2:].strip() )
         dict['certificate']=value[__look_4_zeugnis+2:].strip() 
         #value='asd'
         #value_list.pop(__counter)
     #__counter+=1
+    elif jump_to_certificate:
+        #print ("HALLO")
+        __look_4_zeugnis = value.find(':')
+        dict['certificate']=value[__look_4_zeugnis+1:].strip() 
     else:
         dict['certificate']=None 
 
@@ -205,6 +212,7 @@ def academic_title(value_string,dict):
 
 
 def fill_dict(textfile_object):
+    jump_to_certificate = 0
     list_of_dicts = []
     #print ("\n------------ begin of array---------------\n")
     data_set_array=get_data_sets(textfile_object)
@@ -215,8 +223,9 @@ def fill_dict(textfile_object):
         #print ("\nObject under investigation:", listitem)
         org_listitem = listitem
         getting_name(listitem,dict)
-        get_birth_place(listitem,dict)
-        get_certificate(listitem,dict)
+        #get_academic_title(listitem,dict)
+        jump_to_certificate=get_birth_place(listitem,dict)
+        get_certificate(listitem,dict,jump_to_certificate) 
         list_of_dicts.append(dict)
         dict['object_under_onvestigation'] = listitem 
         #print ("list of dicts: ",listitem)
