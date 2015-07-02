@@ -73,13 +73,38 @@ def check_for_date(__substring,__substring_additional_info ):
         #print ("----------------",__substring)
     return ([__substring,__substring_additional_info, __look_for_suffix ])
 
-def get_birth_place(value,dict):
+def get_academic_title(value,dict):
+    __regex_4_academic_title='(stud\.)+|(Dr\.)+|(dr\.)+|(Stud\.)+'
+    __aca_title_begin = re.search(__regex_4_academic_title,value)
+    if __aca_title_begin is not None:
+        __aca_title_end = value.find(',')
+        if __aca_title_end == -1: 
+            __aca_title_end_2 = value.find('aus')
+            if __aca_title_end_2 == -1:
+                __aca_title_end_2 = value.find('Aus')
+        if __aca_title_end != -1:
+            __substring = value[__aca_title_begin.start(): __aca_title_end]
+            dict['academic_title'] = __substring
+            return value[(__aca_title_end)+1 :]
+        elif __aca_title_end_2 != -1:
+            __substring = value[__aca_title_begin.start(): __aca_title_end]
+            dict['academic_title'] = __substring
+            return value[(__aca_title_end):]
+        print("No delimiter found for get_academic_title in: ", value)
+    else:
+        dict['adcademic title'] = None
+    return value 
+                
+    
+
+def get_birth_place_and_academic_title(value,dict):
     __FROM_LEIPZIG=0
     __look_for_suffix=False
     __counter=0
     __substring_additional_info=''
     ## if no -- was found, there are no birthplace informations
     if value.find('--') == -1:
+        #print ("\n",value)
         #print ("jumping to certificate",dict['surname']," ",dict['prename'])
         dict['additional_information_of_birthplace'] = None 
         dict['birthplace'] = None
@@ -88,8 +113,9 @@ def get_birth_place(value,dict):
         __substring=re.split(':',value,1)
         __substring=re.split('--',__substring[1],1)
         __substring=__substring[0]
-        #__birthplace_delimiter = __substring.find(',')
-        #__regex_4_add_information='(geb\.|aus|b\.|,)+' 
+       
+        __substring=get_academic_title(__substring,dict)
+        #print ("rest 4 Birthplace: ",__substring)
         
         __regex_4_add_information=r'(,)+|(\Wb.\W)+|(\Wb\W)+|(Bez.)+|(bez.)+'
         __birthplace_delimiter = re.search(__regex_4_add_information,__substring)
@@ -142,12 +168,6 @@ def get_birth_place(value,dict):
             return 2
         else:
             dict['additional_information_of_birthplace'] = None 
-            #if __terminate_char:
-            #    __list_of_strings=re.split('--',value,1)
-            #    value = __list_of_strings[1]
-            #    return 1
-            #__counter+=1 
-       
        
         #value_list.pop(__counter-1)
         
@@ -224,7 +244,7 @@ def fill_dict(textfile_object):
         org_listitem = listitem
         getting_name(listitem,dict)
         #get_academic_title(listitem,dict)
-        jump_to_certificate=get_birth_place(listitem,dict)
+        jump_to_certificate = get_birth_place_and_academic_title(listitem,dict)
         get_certificate(listitem,dict,jump_to_certificate) 
         list_of_dicts.append(dict)
         dict['object_under_onvestigation'] = listitem 
