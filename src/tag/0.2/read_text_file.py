@@ -26,6 +26,7 @@
 import json,collections
 import re,sys
 import geonames
+#import certificates as ce
 
 def get_key_value_pair(fileobject):
     print ("test")
@@ -121,7 +122,7 @@ def get_birth_place(value,dict):
         list_leipzig_suburb=open('liste_leipziger_vororte_clean','r')
         for item in list_leipzig_suburb:
             if item.strip().lower() == __substring.lower():
-                dict['birthplace'] = {"source": __substring, "name": "Leipzig"}
+                dict['birthplace'] = {"name": "Leipzig"}
                 __look_for_suffix=True
                 __substring_additional_info=__substring
                 __FROM_LEIPZIG=1         
@@ -130,7 +131,7 @@ def get_birth_place(value,dict):
                loc = geonames.Location.getLocation(__substring)
                   
                if(loc is None):
-                  dict['birthplace'] = {"source": __substring, "name": __substring}
+                  dict['birthplace'] = {"name": __substring}
                else:
                   dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl()}
 
@@ -201,7 +202,7 @@ def get_certificate(value,dict,jump_to_certificate ):
     else:
         certificate = None
 
-    print(certificate)
+    #ce.Certificate.getCertificates(certificate)
 
     dict['certificate'] = certificate
 
