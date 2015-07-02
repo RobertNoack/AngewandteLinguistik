@@ -4,7 +4,7 @@ Akademische Titel beachten mit regex
  Bsp Zeile 131
 
 mehrere akademische Titel möglich
- Bsp Zeile 3140
+ Bsp Zeile 3140, 8330
  "object_under_onvestigation": "Hoffmann, Gürnemanz: stud. jur. et cam., stud. med., aus Berlin--
  oft aber einfach nur durch Titel 1 et Titel 2 dargestellt
 
@@ -18,7 +18,7 @@ Unterscheidung Bereich 1 2 3 und nur Bereich 1 3
  Notizen Zeile 35
  Suche ob -- im Originalstring vorkommt, wenn nicht dann nur Bereich 1 und 3
  Bsp Zeile 74 
- 
+ Gegenbsp 7583 
  
 Unterscheidung ceritficate in die Verschiedenen Dokumenttypen
  Notizen Zeile 38 - 46
@@ -54,8 +54,10 @@ Hinweis Jude
  Bsp 5077 "object_under_onvestigation": "Marcus, Willy: (Jude),
  
 
-Graf im Namen rausfiltern?
+Graf im Namen rausfiltern? Freiherr
  Bsp 7760 "object_under_onvestigation": "von Schönburg-Glauchau, Alfred Graf:
+	 7921 "object_under_onvestigation": "von Seeback, Friedrich Karl Alexander Freiherr:
+ 
  
 Zusätzlich zum Geburtsort Mädchenname der Frau mit geb angegeben
  Bsp 2184 "object_under_onvestigation": "von Garnier, Katharina: geb. Möwes, stud. philol., geb. in Berlin--  
@@ -93,15 +95,15 @@ Generelle Fehler:
  6716	"object_under_onvestigation": "Rabinowicz, Heinrich: (aus Warschau?)--
  6932	"object_under_onvestigation": "R\n"
  7254	"object_under_onvestigation": "Sackellar (ios), Polyvius:
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ 7583	"object_under_onvestigation": "Scheil, Arthur: geb. Gröbzig 7.5.1857"
+ 7679	"object_under_onvestigation": "Schieblich Bernahrd Oscar: aus Pulsnitz-- Reifezeugnis 1867"
+ 7808	"object_under_onvestigation": "Schotsch, Gustav: aus Clausenburg: Abgangszeugnis Universitätsgericht Leipzig 1869"
+ 7880	"object_under_onvestigation": "Schrag, Emil Richard:\n"
+ 8033	"object_under_onvestigation": "Seil, Heinrich: aus Jassy an der Moldau-- 8 Gymnasialzeugnis 1864-1868"
+ 8129	"object_under_onvestigation": "Legitimationskarte, Kollegienbuch, Entlastungsschein Universitätsbibliothek 1900, Abgangszeugnis Universität Leipzig 1900"
+ 8145	"object_under_onvestigation": "Seyler, Georg: aus Harthau b. Bischofswerda-- Zuweisung zur Immat\n"
+ 8218	"object_under_onvestigation": "Starke, Georg Paul: -- Reifezeugnis 1865, väterliche/vormundschaftliche Studiengenehmigung 1865, polizeiliches Führungszeugnis 1870, Abgangszeugnis Universitätsgericht Leipzig 1870"
+ 8459	"object_under_onvestigation": "Reifezeugnis 1874, Berufszeugnis 1876, Abgangszeugnis Universität Halle-Wittenberg 1876"
  
  
 
