@@ -58,9 +58,9 @@
   {
     "surname": "Ackermann",
     "prename": "Hans",
-    "birthplace": "Hörersche SS 1911",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Hörerschein SS 1911",
     "object_under_onvestigation": "Ackermann, Hans: Hörerschein SS 1911"
   },
   {
@@ -74,9 +74,9 @@
   {
     "surname": "Adamson",
     "prename": "Robert James",
-    "birthplace": "Paß 1879",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Paß 1879",
     "object_under_onvestigation": "Adamson, Robert James: Paß 1879"
   },
   {
@@ -226,9 +226,9 @@
   {
     "surname": "Albricht",
     "prename": "Paul aus Altenburg",
-    "birthplace": "Collegien-Buch Leipzig 1888-1892",
-    "additional_information_of_birthplace": "Coll. München 1891 Abschrift Reifezeugnis Friedrichs-Gymnasium Altenburg",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Collegien-Buch Leipzig 1888-1892, Coll. München 1891, Abschrift Reifezeugnis Friedrichs-Gymnasium Altenburg",
     "object_under_onvestigation": "Albricht, Paul aus Altenburg: Collegien-Buch Leipzig 1888-1892, Coll. München 1891, Abschrift Reifezeugnis Friedrichs-Gymnasium Altenburg"
   },
   {
@@ -266,9 +266,9 @@
   {
     "surname": "Anacker",
     "prename": "Heinric",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Anacker, Heinric",
     "object_under_onvestigation": "Anacker, Heinric\n"
   }
 ][
@@ -291,9 +291,9 @@
   {
     "surname": "Abgangszeugnis Universität Göttingen 1876",
     "prename": "Abgangszeugnis Universitätsgericht Leipzig 1876",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Abgangszeugnis Universität Göttingen 1876, Abgangszeugnis Universitätsgericht Leipzig 1876",
     "object_under_onvestigation": "Abgangszeugnis Universität Göttingen 1876, Abgangszeugnis Universitätsgericht Leipzig 1876"
   },
   {
@@ -427,9 +427,9 @@
   {
     "surname": "Barmm",
     "prename": "Charles E.",
-    "birthplace": "Matrikelschee d. Universität Illois 1883",
-    "additional_information_of_birthplace": "Abgangszeugnis Universität Erlangen 1884",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Matrikelscheine d. Universität Illinois 1883, Abgangszeugnis Universität Erlangen 1884",
     "object_under_onvestigation": "Barmm, Charles E.: Matrikelscheine d. Universität Illinois 1883, Abgangszeugnis Universität Erlangen 1884"
   },
   {
@@ -684,9 +684,9 @@
   {
     "surname": "Abgangszeugnis Universität Leipzig 1897",
     "prename": "Abgangszeugnis Universität Leipzig 1897",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Abgangszeugnis Universität Leipzig 1897",
     "object_under_onvestigation": "Abgangszeugnis Universität Leipzig 1897"
   },
   {
@@ -804,9 +804,9 @@
   {
     "surname": "von Beverförde",
     "prename": "Karl",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "von Beverförde, Karl",
     "object_under_onvestigation": "von Beverförde, Karl\n"
   }
 ][
@@ -1206,9 +1206,9 @@
   {
     "surname": "Chuquet",
     "prename": "Maxim Arthur",
-    "birthplace": "Stipendium d. École normal Supéricure 1874",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Stipendium d. École normal Supéricure 1874",
     "object_under_onvestigation": "Chuquet, Maxim Arthur: Stipendium d. École normal Supéricure 1874"
   },
   {
@@ -1343,9 +1343,9 @@
   {
     "surname": "Damianos",
     "prename": "Damianos",
-    "birthplace": "Griech. Zeugnis 1873",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Griech. Zeugnis 1873",
     "object_under_onvestigation": "Damianos: Griech. Zeugnis 1873"
   },
   {
@@ -1423,9 +1423,9 @@
   {
     "surname": "Déduit",
     "prename": "Déduit",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Déduit",
     "object_under_onvestigation": "Déduit"
   },
   {
@@ -1551,9 +1551,9 @@
   {
     "surname": "Dietel",
     "prename": "Rudolf Max Franz",
-    "birthplace": "Masten (Sachsen)",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "geb. Masten (Sachsen)",
     "object_under_onvestigation": "Dietel, Rudolf Max Franz: geb. Masten (Sachsen)\n"
   }
 ][
@@ -1704,9 +1704,9 @@
   {
     "surname": "Eilers",
     "prename": "Wilhelm aus Hannover",
-    "birthplace": "Abgangszeugnis Leipzig 1901",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Abgangszeugnis Leipzig 1901",
     "object_under_onvestigation": "Eilers, Wilhelm aus Hannover: Abgangszeugnis Leipzig 1901"
   },
   {
@@ -1881,9 +1881,9 @@
   {
     "surname": "Falconer",
     "prename": "James W.",
-    "birthplace": "3 Zeugnis d. Universität Edburgh (1886-1888)",
-    "additional_information_of_birthplace": "Zuschrift d. \"Crown Agents for the Colonies\" aus London 1888",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "3 Zeugnis d. Universität Edinburgh (1886-1888), Zuschrift d. \"Crown Agents for the Colonies\" aus London 1888",
     "object_under_onvestigation": "Falconer, James W.: 3 Zeugnis d. Universität Edinburgh (1886-1888), Zuschrift d. \"Crown Agents for the Colonies\" aus London 1888"
   },
   {
@@ -2001,9 +2001,9 @@
   {
     "surname": "Fewkes",
     "prename": "Jesse Walter",
-    "birthplace": "3 Zeugnis d. Harvard-Universität 1872 u. 1877",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "3 Zeugnis d. Harvard-Universität 1872 u. 1877",
     "object_under_onvestigation": "Fewkes, Jesse Walter: 3 Zeugnis d. Harvard-Universität 1872 u. 1877"
   },
   {
@@ -2539,9 +2539,9 @@
   {
     "surname": "Grabau",
     "prename": "Wolfgang Otto",
-    "birthplace": "",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "",
     "object_under_onvestigation": "Grabau, Wolfgang Otto:\n"
   }
 ][
@@ -2620,9 +2620,9 @@
   {
     "surname": "Haendel",
     "prename": "1867",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Haendel, Hugo Hermann aus Cospuden, 1867",
     "object_under_onvestigation": "Haendel, Hugo Hermann aus Cospuden, 1867"
   },
   {
@@ -2796,9 +2796,9 @@
   {
     "surname": "Hamelbeck",
     "prename": "Wilhelm",
-    "birthplace": "Ramsdorf (Kreis Bo",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "geb. Ramsdorf (Kreis Bo",
     "object_under_onvestigation": "Hamelbeck, Wilhelm: geb. Ramsdorf (Kreis Bo\n"
   }
 ][
@@ -2901,17 +2901,17 @@
   {
     "surname": "Henschel",
     "prename": "Marie aus Leipzig",
-    "birthplace": "Collegien-Buch 1914-1918",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Collegien-Buch 1914-1918",
     "object_under_onvestigation": "Henschel, Marie aus Leipzig: Collegien-Buch 1914-1918"
   },
   {
     "surname": " Henshaw",
     "prename": "Curatores Collegii Hobartiani 1891",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Henshaw, Alonzo (Alphonso) Norton, Citizen of the United States 1891, Curatores Collegii Hobartiani 1891",
     "object_under_onvestigation": " Henshaw, Alonzo (Alphonso) Norton, Citizen of the United States 1891, Curatores Collegii Hobartiani 1891"
   },
   {
@@ -3021,9 +3021,9 @@
   {
     "surname": "Hentschel",
     "prename": "G",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Hentschel, G",
     "object_under_onvestigation": "Hentschel, G\n"
   }
 ][
@@ -3367,9 +3367,9 @@
   {
     "surname": "\n",
     "prename": "",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "",
     "object_under_onvestigation": "\n"
   }
 ][
@@ -4195,9 +4195,9 @@
   {
     "surname": "von Krecker-Dro\n",
     "prename": "von Krecker-Dro",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "von Krecker-Dro",
     "object_under_onvestigation": "von Krecker-Dro\n"
   }
 ][
@@ -4686,9 +4686,9 @@
   {
     "surname": "Liehr",
     "prename": "Max aus Heringsdorf",
-    "birthplace": "Collegienbuch 1896/97",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Collegienbuch 1896/97",
     "object_under_onvestigation": "Liehr, Max aus Heringsdorf: Collegienbuch 1896/97"
   },
   {
@@ -4838,9 +4838,9 @@
   {
     "surname": "Linke",
     "prename": "Paul Hugo",
-    "birthplace": "Reifezeugnis 1856",
-    "additional_information_of_birthplace": "väterliche/vormundschaftliche Studiengenehmigung 1856 (2)",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Reifezeugnis 1856, väterliche/vormundschaftliche Studiengenehmigung 1856 (2)",
     "object_under_onvestigation": "Linke, Paul Hugo: Reifezeugnis 1856, väterliche/vormundschaftliche Studiengenehmigung 1856 (2)"
   },
   {
@@ -4871,17 +4871,17 @@
   {
     "surname": "Mach",
     "prename": "Constantin aus Karlsdorf in Böhmen",
-    "birthplace": "1857 Immatrikulationsbescheigung Prag",
-    "additional_information_of_birthplace": "1857 Sittenzeugnis Leipzig Abgangszeugnis Leipzig 1861",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "1857 Immatrikulationsbescheinigung Prag, 1857 Sittenzeugnis Leipzig, Abgangszeugnis Leipzig 1861",
     "object_under_onvestigation": "Mach, Constantin aus Karlsdorf in Böhmen: 1857 Immatrikulationsbescheinigung Prag, 1857 Sittenzeugnis Leipzig, Abgangszeugnis Leipzig 1861"
   },
   {
     "surname": "Mc. Comb",
     "prename": "Samuel",
-    "birthplace": "Zeugnis v. Londonderry 1884",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Zeugnis v. Londonderry 1884",
     "object_under_onvestigation": "Mc. Comb, Samuel: Zeugnis v. Londonderry 1884"
   },
   {
@@ -5047,17 +5047,17 @@
   {
     "surname": "Manthey-Zorn",
     "prename": "Otto",
-    "birthplace": "Zeugnis Collegii Adelberti Cleveland",
-    "additional_information_of_birthplace": "Ohio 1901 Abgangszeugnis Friedrich-Alexander-Universität Erlangen 1902",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Zeugnis Collegii Adelbertini Cleveland, Ohio, 1901, Abgangszeugnis Friedrich-Alexander-Universität Erlangen 1902",
     "object_under_onvestigation": "Manthey-Zorn, Otto: Zeugnis Collegii Adelbertini Cleveland, Ohio, 1901, Abgangszeugnis Friedrich-Alexander-Universität Erlangen 1902"
   },
   {
     "surname": "Mapel",
     "prename": "John I.",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Mapel, John I.",
     "object_under_onvestigation": "Mapel, John I."
   },
   {
@@ -5119,9 +5119,9 @@
   {
     "surname": "Markovic-Bel\n",
     "prename": "Markovic-Bel",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Markovic-Bel",
     "object_under_onvestigation": "Markovic-Bel\n"
   }
 ][
@@ -5577,17 +5577,17 @@
   {
     "surname": "Mühlner",
     "prename": "Karl Friedrich",
-    "birthplace": "Leipzig",
-    "additional_information_of_birthplace": "21.11.1844",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "geb. Leipzig 21.11.1844",
     "object_under_onvestigation": "Mühlner, Karl Friedrich: geb. Leipzig 21.11.1844"
   },
   {
     "surname": "Schulzeugnis 1863",
     "prename": "väterliche/vormundschaftliche Studiengenehmigung (Prot) 1863",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Schulzeugnis 1863, Reifezeugnis. 1863, väterliche/vormundschaftliche Studiengenehmigung 1863, väterliche/vormundschaftliche Studiengenehmigung (Prot) 1863",
     "object_under_onvestigation": "Schulzeugnis 1863, Reifezeugnis. 1863, väterliche/vormundschaftliche Studiengenehmigung 1863, väterliche/vormundschaftliche Studiengenehmigung (Prot) 1863"
   },
   {
@@ -5609,9 +5609,9 @@
   {
     "surname": "Müller",
     "prename": "Alfred",
-    "birthplace": "Hermannstadt  Siebenbürgen: Entlassungsurkunde 1868",
-    "additional_information_of_birthplace": "Heimatschein Hermannstadt 1869 Pfarramtl. Bestätigung 1869 Zuweisung zur Immatrikulation 1869 Gesuch um Immatrikulation 1869 väterliche/vormundschaftliche Studiengenehmigung des Kultusminist. 1869",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "aus Hermannstadt in Siebenbürgen: Entlassungsurkunde 1868, Heimatschein Hermannstadt 1869, Pfarramtl. Bestätigung 1869, Zuweisung zur Immatrikulation 1869, Gesuch um Immatrikulation 1869, väterliche/vormundschaftliche Studiengenehmigung des Kultusminist. 1869",
     "object_under_onvestigation": "Müller, Alfred: aus Hermannstadt in Siebenbürgen: Entlassungsurkunde 1868, Heimatschein Hermannstadt 1869, Pfarramtl. Bestätigung 1869, Zuweisung zur Immatrikulation 1869, Gesuch um Immatrikulation 1869, väterliche/vormundschaftliche Studiengenehmigung des Kultusminist. 1869"
   },
   {
@@ -5625,9 +5625,9 @@
   {
     "surname": "Müller",
     "prename": "Arved",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Müller, Arved",
     "object_under_onvestigation": "Müller, Arved\n"
   }
 ][
@@ -5874,9 +5874,9 @@
   {
     "surname": "Neumann",
     "prename": "Moritz Heinrich",
-    "birthplace": "G",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "aus G",
     "object_under_onvestigation": "Neumann, Moritz Heinrich: aus G\n"
   }
 ][
@@ -6308,9 +6308,9 @@
   {
     "surname": "Paspatti",
     "prename": "Philipp",
-    "birthplace": "Zeugnis v. Lanne 1878",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Zeugnis v. Lausanne 1878",
     "object_under_onvestigation": "Paspatti, Philipp: Zeugnis v. Lausanne 1878"
   },
   {
@@ -6388,9 +6388,9 @@
   {
     "surname": "Pause",
     "prename": "Erwin Adelbert (Albin?)",
-    "birthplace": "Meerane: Reifezeugnis 1872",
-    "additional_information_of_birthplace": "Abgangszeugnis Universitätsgericht Leipzig 1874 Abgangszeugnis Universität Heidelberg 1874 Prüfungszeugnis 1875 Praktikantenscheine (5) Abgangszeugnis Universitätsgericht Leipzig 1876 Abgangszeugnis Universität Erlangen 1877 Abgangszeugnis Universitätsgericht Leipzig 1877",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "aus Meerane: Reifezeugnis 1872, Abgangszeugnis Universitätsgericht Leipzig 1874, Abgangszeugnis Universität Heidelberg 1874, Prüfungszeugnis 1875, Praktikantenscheine (5), Abgangszeugnis Universitätsgericht Leipzig 1876, Abgangszeugnis Universität Erlangen 1877, Abgangszeugnis Universitätsgericht Leipzig 1877",
     "object_under_onvestigation": "Pause, Erwin Adelbert (Albin?): aus Meerane: Reifezeugnis 1872, Abgangszeugnis Universitätsgericht Leipzig 1874, Abgangszeugnis Universität Heidelberg 1874, Prüfungszeugnis 1875, Praktikantenscheine (5), Abgangszeugnis Universitätsgericht Leipzig 1876, Abgangszeugnis Universität Erlangen 1877, Abgangszeugnis Universitätsgericht Leipzig 1877"
   },
   {
@@ -6445,9 +6445,9 @@
   {
     "surname": "Pollack",
     "prename": "Ernst Emil Arthur",
-    "birthplace": "Geisg",
-    "additional_information_of_birthplace": "16.4.1855",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "geb. Geising 16.4.1855",
     "object_under_onvestigation": "Pollack, Ernst Emil Arthur: geb. Geising 16.4.1855"
   },
   {
@@ -6573,9 +6573,9 @@
   {
     "surname": "Preller",
     "prename": "geb. 29. 8. 1857 in Chemnitz",
-    "birthplace": "Legitimationsbescheigung",
-    "additional_information_of_birthplace": "Geburtsschein",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Legitimationsbescheinigung, Geburtsschein",
     "object_under_onvestigation": "Preller, Oskar Emil, geb. 29. 8. 1857 in Chemnitz: Legitimationsbescheinigung, Geburtsschein"
   },
   {
@@ -6742,9 +6742,9 @@
   {
     "surname": "Rae",
     "prename": "John",
-    "birthplace": "England: Paß 1867",
-    "additional_information_of_birthplace": "Zeugnis v. New College Edinburgh 1868",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "aus England: Paß 1867, Zeugnis v. New College Edinburgh 1868",
     "object_under_onvestigation": "Rae, John: aus England: Paß 1867, Zeugnis v. New College Edinburgh 1868"
   },
   {
@@ -6806,9 +6806,9 @@
   {
     "surname": "Rauchfuß",
     "prename": "Ernst Hermann Otto",
-    "birthplace": "Prüfungszeugnis 1875",
-    "additional_information_of_birthplace": "Berufszeugnis 1875-1878 (7)",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Prüfungszeugnis 1875, Berufszeugnis 1875-1878 (7)",
     "object_under_onvestigation": "Rauchfuß, Ernst Hermann Otto: Prüfungszeugnis 1875, Berufszeugnis 1875-1878 (7)"
   },
   {
@@ -6926,9 +6926,9 @@
   {
     "surname": "R\n",
     "prename": "R",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "R",
     "object_under_onvestigation": "R\n"
   }
 ][
@@ -7175,17 +7175,17 @@
   {
     "surname": "Studienbuch von Genf 1885",
     "prename": "Abgangszeugnis Universitätsgericht Leipzig 1886",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Studienbuch von Genf 1885, Abgangszeugnis Universitätsgericht Leipzig 1886",
     "object_under_onvestigation": "Studienbuch von Genf 1885, Abgangszeugnis Universitätsgericht Leipzig 1886"
   },
   {
     "surname": "Rolfs",
     "prename": "Wilhelm",
-    "birthplace": "Hiddenwarder Mühle (Jeverland) 25.2.",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "geb. Hiddenwarder Mühle (Jeverland) 25.2.",
     "object_under_onvestigation": "Rolfs, Wilhelm: geb. Hiddenwarder Mühle (Jeverland) 25.2.\n"
   }
 ][
@@ -7577,9 +7577,9 @@
   {
     "surname": "Scheil",
     "prename": "Arthur",
-    "birthplace": "Gröbzig",
-    "additional_information_of_birthplace": "7.5.1857",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "geb. Gröbzig 7.5.1857",
     "object_under_onvestigation": "Scheil, Arthur: geb. Gröbzig 7.5.1857"
   },
   {
@@ -7754,17 +7754,17 @@
   {
     "surname": "von Schönburg-Glauchau",
     "prename": "Alfred Graf",
-    "birthplace": "Lehrzeugnis 1847",
-    "additional_information_of_birthplace": "Reifezeugnis 1847",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "Lehrzeugnis 1847, Reifezeugnis 1847",
     "object_under_onvestigation": "von Schönburg-Glauchau, Alfred Graf: Lehrzeugnis 1847, Reifezeugnis 1847"
   },
   {
     "surname": "Schönburg",
     "prename": "Georg",
-    "birthplace": "Leipzig: Zuweisung zur Immatrikulation 1879",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "aus Leipzig: Zuweisung zur Immatrikulation 1879",
     "object_under_onvestigation": "Schönburg, Georg: aus Leipzig: Zuweisung zur Immatrikulation 1879"
   },
   {
@@ -7802,9 +7802,9 @@
   {
     "surname": "Schotsch",
     "prename": "Gustav",
-    "birthplace": "Clenburg: Abgangszeugnis Universitätsgericht Leipzig 1869",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "aus Clausenburg: Abgangszeugnis Universitätsgericht Leipzig 1869",
     "object_under_onvestigation": "Schotsch, Gustav: aus Clausenburg: Abgangszeugnis Universitätsgericht Leipzig 1869"
   },
   {
@@ -7874,9 +7874,9 @@
   {
     "surname": "Schrag",
     "prename": "Emil Richard",
-    "birthplace": "",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "",
     "object_under_onvestigation": "Schrag, Emil Richard:\n"
   }
 ][
@@ -8043,9 +8043,9 @@
   {
     "surname": "Abgangszeugnis Universität Erlangen 1886",
     "prename": "Abgangszeugnis Universitätsgericht Leipzig 1888",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Abgangszeugnis Universität Erlangen 1886, Abgangszeugnis Universität Freiburg 1886, Abgangszeugnis Universität Halle-Wittenberg 1888, Abgangszeugnis Universitätsgericht Leipzig 1888",
     "object_under_onvestigation": "Abgangszeugnis Universität Erlangen 1886, Abgangszeugnis Universität Freiburg 1886, Abgangszeugnis Universität Halle-Wittenberg 1888, Abgangszeugnis Universitätsgericht Leipzig 1888"
   },
   {
@@ -8123,9 +8123,9 @@
   {
     "surname": "Legitimationskarte",
     "prename": "Abgangszeugnis Universität Leipzig 1900",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Legitimationskarte, Kollegienbuch, Entlastungsschein Universitätsbibliothek 1900, Abgangszeugnis Universität Leipzig 1900",
     "object_under_onvestigation": "Legitimationskarte, Kollegienbuch, Entlastungsschein Universitätsbibliothek 1900, Abgangszeugnis Universität Leipzig 1900"
   },
   {
@@ -8445,25 +8445,25 @@
   {
     "surname": "Toppe",
     "prename": "Georg Wilhelm Erdmann",
-    "birthplace": "Tankow bei friedeberg 7.11. 1853",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "geb. Tankow bei friedeberg 7.11. 1853",
     "object_under_onvestigation": "Toppe, Georg Wilhelm Erdmann: geb. Tankow bei friedeberg 7.11. 1853"
   },
   {
     "surname": "Reifezeugnis 1874",
     "prename": "Abgangszeugnis Universität Halle-Wittenberg 1876",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Reifezeugnis 1874, Berufszeugnis 1876, Abgangszeugnis Universität Halle-Wittenberg 1876",
     "object_under_onvestigation": "Reifezeugnis 1874, Berufszeugnis 1876, Abgangszeugnis Universität Halle-Wittenberg 1876"
   },
   {
     "surname": "Tarnowski",
     "prename": "Tarnowski",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Tarnowski",
     "object_under_onvestigation": "Tarnowski"
   },
   {
@@ -8477,9 +8477,9 @@
   {
     "surname": "Taschkoff",
     "prename": "Taschkoff",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Taschkoff",
     "object_under_onvestigation": "Taschkoff"
   },
   {
@@ -8629,25 +8629,25 @@
   {
     "surname": "Thiele",
     "prename": "Adalbert",
-    "birthplace": "Ldenau",
-    "additional_information_of_birthplace": "29.12.186",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "geb. Lindenau 29.12.186",
     "object_under_onvestigation": "Thiele, Adalbert: geb. Lindenau 29.12.186"
   },
   {
     "surname": "Matrikelscheine 1889",
     "prename": "Entlastungsschein Universitätsbibliothek 1890",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Matrikelscheine 1889, Legitimationskarte, Kollegienbuch, Reifezeugnis 1886, Entlastungsschein Universitätsbibliothek 1890",
     "object_under_onvestigation": "Matrikelscheine 1889, Legitimationskarte, Kollegienbuch, Reifezeugnis 1886, Entlastungsschein Universitätsbibliothek 1890"
   },
   {
     "surname": "Abgangszeugnis Universität Leipzig 1890",
     "prename": "Abgangszeugnis Universität Leipzig 1890",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Abgangszeugnis Universität Leipzig 1890",
     "object_under_onvestigation": "Abgangszeugnis Universität Leipzig 1890"
   },
   {
@@ -8726,17 +8726,17 @@
   {
     "surname": "Ulbricht",
     "prename": "Friedrich Hermann",
-    "birthplace": "stud. paed.",
-    "additional_information_of_birthplace": "aus Eppendorf 9.2.1853",
-    "certificate": null,
+    "additional_information_of_birthplace": null,
+    "birthplace": null,
+    "certificate": "stud. paed., aus Eppendorf 9.2.1853",
     "object_under_onvestigation": "Ulbricht, Friedrich Hermann: stud. paed., aus Eppendorf 9.2.1853"
   },
   {
     "surname": "Geburtsschein",
     "prename": "Abgangszeugnis Universitätsgericht Leipzig 1877",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Geburtsschein, Wohlfähigkeitszeugnis 1874, Berufszeugnis 1875, Matrikelscheine 1875, Abgangszeugnis Universitätsgericht Leipzig 1877",
     "object_under_onvestigation": "Geburtsschein, Wohlfähigkeitszeugnis 1874, Berufszeugnis 1875, Matrikelscheine 1875, Abgangszeugnis Universitätsgericht Leipzig 1877"
   },
   {
@@ -9328,9 +9328,9 @@
   {
     "surname": "Wä\n",
     "prename": "Wä",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Wä",
     "object_under_onvestigation": "Wä\n"
   }
 ][
@@ -9361,9 +9361,9 @@
   {
     "surname": "Westphal",
     "prename": "Max aus Greifswald",
-    "birthplace": "Coll.-Buch 1888-89",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Coll.-Buch 1888-89",
     "object_under_onvestigation": "Westphal, Max aus Greifswald: Coll.-Buch 1888-89"
   },
   {
@@ -9425,9 +9425,9 @@
   {
     "surname": "Wibel",
     "prename": "Wibel",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Wibel",
     "object_under_onvestigation": "Wibel"
   },
   {
@@ -9634,9 +9634,9 @@
   {
     "surname": "\n",
     "prename": "",
-    "birthplace": null,
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "",
     "object_under_onvestigation": "\n"
   }
 ][
@@ -9843,9 +9843,9 @@
   {
     "surname": "Ziem",
     "prename": "Max",
-    "birthplace": "Hörersche Leipzig SS 1911",
     "additional_information_of_birthplace": null,
-    "certificate": null,
+    "birthplace": null,
+    "certificate": "Hörerschein Leipzig SS 1911",
     "object_under_onvestigation": "Ziem, Max: Hörerschein Leipzig SS 1911"
   },
   {
