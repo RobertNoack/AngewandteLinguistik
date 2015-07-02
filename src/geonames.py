@@ -6,6 +6,7 @@ import json
 
 DOMAIN = 'http://api.geonames.org/'
 USERNAME = 'asv2015' #username
+MAPS = 'https://maps.google.de/maps?q='
 
 class Location(object): 
 
@@ -22,6 +23,9 @@ class Location(object):
 
 	def getLat(self):
 		return self.lat
+
+	def getUrl(self):
+		return MAPS + str(self.lat) + ',' + str(self.lng)
 
 def fetchJson(method, params):
 	uri = DOMAIN + '%s?%s' % (method, urllib.parse.urlencode(params))
@@ -48,4 +52,4 @@ if __name__ == '__main__':
 	if(l is None):
 		print('Not found')
 	else:
-		print("name: " + l.getName() + " lng: " + str(l.getLng()) + " lat: " + str(l.getLat()))
+		print("name: " + l.getName() + " lng: " + str(l.getLng()) + " lat: " + str(l.getLat()) + " url: " + str(l.getUrl()))
