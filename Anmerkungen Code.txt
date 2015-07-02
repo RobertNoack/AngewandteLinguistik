@@ -53,14 +53,17 @@ Hinweis Jude
  eigenes Feld?
  Bsp 5077 "object_under_onvestigation": "Marcus, Willy: (Jude),
  
-		
+
+Graf im Namen rausfiltern?
+ Bsp 7760 "object_under_onvestigation": "von Schönburg-Glauchau, Alfred Graf:
+ 
 Zusätzlich zum Geburtsort Mädchenname der Frau mit geb angegeben
-	2184 "object_under_onvestigation": "von Garnier, Katharina: geb. Möwes, stud. philol., geb. in Berlin--  
+ Bsp 2184 "object_under_onvestigation": "von Garnier, Katharina: geb. Möwes, stud. philol., geb. in Berlin--  
 
 	
 Doppelter Herkunftsort
-	2361 "object_under_onvestigation": "Golembiewski, Alexander: stud. oecon., aus Warschau, aus Kowal--
-
+ Bsp 2361 "object_under_onvestigation": "Golembiewski, Alexander: stud. oecon., aus Warschau, aus Kowal--
+	
 	
 Generelle Fehler:
  Mehrere Objekte [] durch die Zellen-Zeilentrennung Bsp 274
