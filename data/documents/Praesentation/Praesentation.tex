@@ -8,7 +8,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-
+\usepackage{xcolor}
 
 \author{Robert Noack, Stefan Schaub, Ramon Bernert}
 \title{\textbf{Themenbereich 8: \\Daten des Universitätsarchivs}}
@@ -32,17 +32,7 @@
 \tableofcontents
 \end{frame}
 
-\section{Einführung}
- \subsection*{~}
-\begin{frame}{Einleitung}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\section{Ausgangsdaten}
+\section{Einleitung}
  \subsection*{~}
 \begin{frame}{Datenherkunft}
 
@@ -66,6 +56,10 @@
  \end{block}
 \end{frame} 
 
+
+\section{Strukturierung}
+ \subsection*{~}
+ 
 \begin{frame}{Namensbereich}
  Nachname, Vorname$_1$ Vorname$_2$ ... Vorname$_n$:
 
@@ -73,39 +67,97 @@
  \begin{block}{Beispiel}
  \normalsize Ahnemüller, Gottlob Wilhelm:
  \end{block}
+
+ \begin{block}{Struktur}
+  \normalsize
+  \{
+  \newline
+  \hspace*{0.5cm}
+  "{}surname"{}: "{}Ahnemüller"{},
+  \newline
+  \hspace*{0.5cm}    
+  "{}prename"{}: "{}Gottlob Wilhelm"{},
+ \end{block} 
 \end{frame}
 
 
 \begin{frame}{persönliche Informationen}
- akademischer Titel, Geburtsort Geburtsjahr--
+ : akademischer Titel, Geburtsort Geburtsjahr-{}-
 
  \vspace*{\fill}
  \begin{block}{Beispiele}
   \normalsize
   \begin{itemize}
    \item stud. oecon., geb. Kiel 5.9.1897-{}-
-   \item test
+   \item geb. 5.7.1860 in  Zöblitz-{}-
+   \item aus Saalfeld-{}-
   \end{itemize}
  \end{block}
+ 
+ \begin{block}{Struktur}
+  \normalsize
+  \hspace*{0.5cm}
+  "{}adcademic title"{}: "{}stud. oecon."{},
+  \newline 
+  \hspace*{0.5cm}    
+  "{}birthplace"{}: "{}Kiel"{},
+  \newline
+  \hspace*{0.5cm}
+  "{}birthdate"{}: "{}5.9.1897"{},    
+  \newline
+  \hspace*{0.5cm}
+  "{}additional\_information\_of\_birthplace"{}: "{}null"{},
+ \end{block} 
 \end{frame}
 
-
 \begin{frame}{Dokumente}
-
-
+ -{}- Dokument$_1$, Dokument$_2$, ..., Dokument$_n$.-
 
  \vspace*{\fill}
  \begin{block}{Beispiel}
- \normalsize text hier einfügen
+  \normalsize
+  \begin{itemize}
+   \item Entlastungsschein Universitätsbibliothek 1910, Abgangszeugnis Universität Leipzig 1910.-
+   \item Abgangszeugnis Universitätsgericht Leipzig 1842.-
+   \item G, M, väterliche/vormundschaftliche Studiengenehmigung 1872.-
+  \end{itemize}
  \end{block}
+ 
+ \begin{block}{Struktur}
+  \normalsize
+  \hspace*{0.5cm} 
+  "{}certificate"{}: "{}Entlastungsschein Universitätsbibliothek 1910, Abgangszeugnis Universität Leipzig 1910"{}
+ \end{block}
+ 
 \end{frame}
-
 
 \begin{frame}{Gewünschte Struktur}
+ \begin{block}{Beispiel}
+  \small
+  Abb, Edmund: geb. Trennfurt, Bez. Obernberg 8.6.1878-{}- Prüfungszeugnis 1902.-
+ \end{block}
 
-
-
+ \begin{block}{Struktur}
+  \small
+  \textcolor{green}{"{}surname"{}: "{}Abb"{},}
+  \newline
+  \textcolor{green}{"{}prename"{}: "{}Edmund"{},}
+  \newline 
+  \textcolor{red}{"{}adcademic title"{}: "{}null"{},}
+  \newline 
+  \textcolor{red}{"{}birthplace"{}: "{}Trennfurt"{},}
+  \newline
+  \textcolor{red}{"{}birthdate"{}: "{}8.6.1878"{},}
+  \newline
+  \textcolor{red}{"{}additional\_information\_of\_birthplace"{}: "{}Bez. Obernberg"{},}
+  \newline
+  \textcolor{cyan}{"{}certificate"{}: "{}Prüfungszeugnis 1902"{},}
+  \newline
+  "{}object\_under\_investigation"{}: "{}Abb, Edmund: geb. Trennfurt, Bez. Obernberg 8.6.1878-{}- Prüfungszeugnis 1902"{}
+ \end{block} 
 \end{frame}
+
+
 
 
 \section{Quelldatenfehler}
@@ -117,21 +169,35 @@
  \end{itemize}
 \end{frame}
 
-\section{Verwendete Verfahren}
+\section{Erweiterte Struktur}
  \subsection*{~}
-\begin{frame}{Ablauf}
- \begin{itemize}
-  \item regex Filter für die 3 Bereiche
- \end{itemize}
-\end{frame}
-
-\begin{frame}{Python Code}
-
-\end{frame}
 
 \begin{frame}{Geotag}
 
 \end{frame}
+ 
+\begin{frame}{Geotag Beispiel}
+
+\end{frame} 
+ 
+ 
+\begin{frame}{Dokumenttypen}
+ \begin{itemize}
+  \item Zeugnis
+  \item Buch
+  \item Schein
+  \item Protokoll
+  \item Genehmigung
+  \item Zuweisung
+  \item Diplom
+  \item Quittung
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Dokumenttypen Beispiel}
+
+\end{frame}
+
 
 \begin{frame}{zukünftige Verfahren}
  \begin{itemize}
