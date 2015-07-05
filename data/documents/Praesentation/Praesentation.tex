@@ -35,6 +35,14 @@
 \section{Einleitung}
  \subsection*{~}
 \begin{frame}{Datenherkunft}
+ \begin{itemize}
+  \item Daten über zurückgelassene Dokumente von Studenten
+  \item stammen aus dem Universitätsarchiv
+  \item Reichen bis ins 19. Jhr. zurück
+  \item liegen in xls-Format vor
+  \item Tabelle mit 41 Zeilen
+  \item Informationen zu mehreren Studenten in einer Zelle
+ \end{itemize}
 
 \end{frame}
 
@@ -122,14 +130,41 @@
    \item G, M, väterliche/vormundschaftliche Studiengenehmigung 1872.-
   \end{itemize}
  \end{block}
- 
+\end{frame}
+
+
+\begin{frame}{Dokumente}
  \begin{block}{Struktur}
   \normalsize
   \hspace*{0.5cm} 
-  "{}certificate"{}: "{}Entlastungsschein Universitätsbibliothek 1910, Abgangszeugnis Universität Leipzig 1910"{}
- \end{block}
- 
+  "'certificate"': [\{
+\newline 
+\hspace*{1cm}"'source"': "'Reifezeugnis 1866"',
+\newline 
+\hspace*{1cm}"'name"': "'Reifezeugnis"',
+\newline 
+\hspace*{1cm}"'type"': "'Zeugnis"',
+\newline 
+\hspace*{1cm}"'year"': "'1866"'
+\newline 
+\hspace*{0.5cm}\},\{
+\newline 
+\hspace*{1cm}"'source"': "'Abgangszeugnis Universität Leipzig 1873"',
+\newline 
+\hspace*{1cm}"'name"': "'Abgangszeugnis Universität Leipzig"',
+\newline 
+\hspace*{1cm}"'location"': \{
+\newline 
+\hspace*{1cm}\hspace*{0.5cm}"'name"': "'Leipzig"',
+\newline 
+\hspace*{1cm}\},
+\newline 
+\hspace*{1cm}"'type"': "'Zeugnis"',
+\newline 
+\hspace*{1cm}"'year"': "'1873"'\}]
+ \end{block} 
 \end{frame}
+
 
 \begin{frame}{Gewünschte Struktur}
  \begin{block}{Beispiel}
@@ -172,17 +207,18 @@
 \section{Erweiterte Struktur}
  \subsection*{~}
 
-\begin{frame}{Geotag}
+\begin{frame}{Geotagging}
 \begin{itemize}
   \item Zur Identifizierung von Orten: geonames.org
   \item Bietet einfache API
   \item gibt JSON zurück
+  \item enthält geonameID, Längen- und Breitengrad
   \item Aufruf des Webservices erfolgt in Klasse Location
   \item Verwendung zum Parsen des Geburts- und Dokumentenorts
  \end{itemize}
 \end{frame}
  
-\begin{frame}{Geotag}
+\begin{frame}{Geotagging}
  \vspace*{\fill}
  \begin{block}{Aufruf}
  \normalsize http://api.geonames.org/searchJSON?q=Leipzig\&username=...
@@ -207,7 +243,7 @@
  \end{block}
 \end{frame} 
  
-\begin{frame}{Geotag}
+\begin{frame}{Geotagging}
  \begin{itemize}
   \item statische Methode Location.getLocation(city) erzeugt aus String eine Location-Instanz
   \item Instanzen werden gecached
