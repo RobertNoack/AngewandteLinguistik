@@ -177,10 +177,12 @@
   \item Zur Identifizierung von Orten: geonames.org
   \item Bietet einfache API
   \item gibt JSON zurück
+  \item Aufruf des Webservices erfolgt in Klasse Location
+  \item Verwendung zum Parsen des Geburts- und Dokumentenorts
  \end{itemize}
 \end{frame}
  
-\begin{frame}{Geotag Beispiel}
+\begin{frame}{Geotag}
  \vspace*{\fill}
  \begin{block}{Aufruf}
  \normalsize http://api.geonames.org/searchJSON?q=Leipzig\&username=...
@@ -205,6 +207,30 @@
  \end{block}
 \end{frame} 
  
+\begin{frame}{Geotag}
+ \begin{itemize}
+  \item statische Methode Location.getLocation(city) erzeugt aus String eine Location-Instanz
+  \item Instanzen werden gecached
+  \item Location.getLng() gibt z.B. Longitude zurück
+ \end{itemize}
+ 
+ \vspace*{\fill}
+ \begin{block}{Erzeugtes JSON}
+ \normalsize \{
+ \newline
+ \hspace*{0.5cm}"'name"': "'Leipzig"',
+ \newline
+ \hspace*{0.5cm}"'latitude"': "'51.33962"',
+ \newline
+ \hspace*{0.5cm}"'geonameId"': 2879139,
+ \newline
+ \hspace*{0.5cm}"'longitude"': "'12.37129"',
+ \newline
+ \hspace*{0.5cm}"'url"': "'https://maps.google.de/maps?q=51.33962,12.37129"'
+ \newline
+ \}
+ \end{block}
+\end{frame}
  
 \begin{frame}{Dokumenttypen}
  \begin{itemize}
