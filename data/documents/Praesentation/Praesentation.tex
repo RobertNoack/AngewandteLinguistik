@@ -134,6 +134,17 @@
 
 
 \begin{frame}{Dokumente}
+ \begin{itemize}
+  \item statische Methode Certificate.getCertificates(value) erzeugt aus String entsprechende Certificate-Instanzen
+  \item Zerlegt String anhand von Komma
+  \item Regex .*(\textbackslash d\{4\}([/]\textbackslash d\{2\})*).* sucht nach Jahreszahl
+  \item Jedes Wort wird an Location.getLocation(city) übergeben um Ort zu finden
+  \item Location.getYear() gibt Jahreszahl zurück
+ \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Dokumente}
  \begin{block}{Struktur}
   \normalsize
   \hspace*{0.5cm} 
@@ -247,7 +258,7 @@
  \begin{itemize}
   \item statische Methode Location.getLocation(city) erzeugt aus String eine Location-Instanz
   \item Instanzen werden gecached
-  \item Location.getLng() gibt z.B. Longitude zurück
+  \item Location.getLng() gibt Längengrad zurück
  \end{itemize}
  
  \vspace*{\fill}
