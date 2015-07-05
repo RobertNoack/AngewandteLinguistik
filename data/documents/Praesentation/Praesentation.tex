@@ -59,17 +59,13 @@
 
 
 \begin{frame}{Struktur der Ausgangsdaten}
-\begin{itemize}
-\item 
-\item 3 Infromationsbereiche
+3 Infromationsbereiche
  \begin{enumerate}
   \item Namensbereich
   \item persönliche Informationen
   \item Dokumente
  \end{enumerate}
-\end{itemize}
 
- 
  \vspace*{\fill}
  \begin{block}{Beispiel}
  \normalsize Namensbereich: persönliche Informationen-{}- Dokumente.-
@@ -144,6 +140,18 @@
  \end{block}
 \end{frame}
 
+\begin{frame}{Dokumenttypen}
+ \begin{itemize}
+  \item Zeugnis
+  \item Buch
+  \item Schein
+  \item Protokoll
+  \item Genehmigung
+  \item Zuweisung
+  \item Diplom
+  \item Quittung
+ \end{itemize}
+\end{frame}
 
 \begin{frame}{Dokumente}
  \begin{itemize}
@@ -154,7 +162,6 @@
   \item Location.getYear() gibt Jahreszahl zurück
  \end{itemize}
 \end{frame}
-
 
 \begin{frame}{Dokumente}
  \begin{block}{Struktur}
@@ -194,24 +201,50 @@
   \small
   Abb, Edmund: geb. Trennfurt, Bez. Obernberg 8.6.1878-{}- Prüfungszeugnis 1902.-
  \end{block}
+\end{frame}
 
+\begin{frame}
  \begin{block}{Struktur}
   \small
+  \{
+  \newline
+  \hspace*{0.5cm}
   \textcolor{green}{"{}surname"{}: "{}Abb"{},}
   \newline
+  \hspace*{0.5cm}
   \textcolor{green}{"{}prename"{}: "{}Edmund"{},}
   \newline 
+  \hspace*{0.5cm}
   \textcolor{red}{"{}adcademic title"{}: "{}null"{},}
   \newline 
+  \hspace*{0.5cm}
   \textcolor{red}{"{}birthplace"{}: "{}Trennfurt"{},}
   \newline
+  \hspace*{0.5cm}
   \textcolor{red}{"{}birthdate"{}: "{}8.6.1878"{},}
   \newline
+  \hspace*{0.5cm}
   \textcolor{red}{"{}additional\_information\_of\_birthplace"{}: "{}Bez. Obernberg"{},}
   \newline
-  \textcolor{cyan}{"{}certificate"{}: "{}Prüfungszeugnis 1902"{},}
+  \hspace*{0.5cm}
+  \textcolor{cyan}{"{}certificate"{}: [$\{$
+%  "{}Prüfungszeugnis 1902"{},}
+%  "{}certificate"{}: 
+  \newline 
+  \hspace*{1cm}"{}source"{}: "{}Prüfungszeugnis 1902"{},
+  \newline 
+  \hspace*{1cm}"{}name"{}: "{}Prüfungszeugnis"{},
+  \newline 
+  \hspace*{1cm}"{}type"{}: "{}Zeugnis"{},
+  \newline 
+  \hspace*{1cm}"{}year"{}: "{}1902"{}$\}$ ]} 
   \newline
-  "{}object\_under\_investigation"{}: "{}Abb, Edmund: geb. Trennfurt, Bez. Obernberg 8.6.1878-{}- Prüfungszeugnis 1902"{}
+  \hspace*{0.5cm}
+  "{}object\_under\_investigation"{}: "{}Abb, Edmund: geb. Trennfurt,\\
+  \hspace*{0.5cm}
+   Bez. Obernberg 8.6.1878-{}- Prüfungszeugnis 1902"{}
+  \newline
+  \}
  \end{block} 
 \end{frame}
 
@@ -270,7 +303,7 @@
   \item Location.getLng() gibt Längengrad zurück
  \end{itemize}
  
- \vspace*{\fill}
+% \vspace*{\fill}
  \begin{block}{Erzeugtes JSON}
  \normalsize \{
  \newline
@@ -282,24 +315,14 @@
  \newline
  \hspace*{0.5cm}"'longitude"': "'12.37129"',
  \newline
- \hspace*{0.5cm}"'url"': "'https://maps.google.de/maps?q=51.33962,12.37129"'
+ \hspace*{0.5cm}"'url"': 
+ \hspace*{0.5cm}"'https://maps.google.de/maps?q=51.33962,12.37129"'
  \newline
  \}
  \end{block}
 \end{frame}
  
-\begin{frame}{Dokumenttypen}
- \begin{itemize}
-  \item Zeugnis
-  \item Buch
-  \item Schein
-  \item Protokoll
-  \item Genehmigung
-  \item Zuweisung
-  \item Diplom
-  \item Quittung
- \end{itemize}
-\end{frame}
+
 
 \begin{frame}{Dokumenttypen Beispiel}
 
