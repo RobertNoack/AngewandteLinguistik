@@ -62,18 +62,19 @@ def get_data_sets(string):
     data_set_array = re.split(r'\.-\s',string)
     return data_set_array
 
-def check_for_date(__substring,__substring_additional_info ):
+def check_for_date(__substring,birth_date):
     __date_regex = '[0-9]+\.[0-9]+\.[0-9][0-9]+'
-    __look_for_suffix=False
+    #__look_for_suffix=False
     __place_of_date=re.search(__date_regex,__substring) 
     if __place_of_date is not None:
-        __substring_additional_info = __substring_additional_info + __substring[__place_of_date.start():__place_of_date.end()]
-        #print ("üüüüüüüüüüüü ",__substring_additional_info)
-        __look_for_suffix=True
-        __substring=__substring[:__place_of_date.start()] + __substring [__place_of_date.end():]
-        #__substring=re.sub(__date_regex,'',__substring)
-        #print ("----------------",__substring)
-    return ([__substring,__substring_additional_info, __look_for_suffix ])
+       # print ("found date:",__substring)
+        __date = __substring[__place_of_date.start():__place_of_date.end()]
+       # print (__date)
+        birth_date.append(__date)
+        __rest_of_substring = __substring[:__place_of_date.start()]+__substring[__place_of_date.end():]
+       # print ("__rest_of_substring" ,__rest_of_substring )
+        return __rest_of_substring 
+    return __substring
 
 def get_academic_title(value,dict):
     __regex_4_academic_title='(stud\.)+|(Dr\.)+|(dr\.)+|(Stud\.)+'
@@ -89,17 +90,23 @@ def get_academic_title(value,dict):
             dict['academic_title'] = __substring
             return value[(__aca_title_end)+1 :]
         elif __aca_title_end_2 != -1:
-            __substring = value[__aca_title_begin.start(): __aca_title_end]
+            __substring = value[__aca_title_begin.start(): __aca_title_end_2]
+            
+          #  print(value)
             dict['academic_title'] = __substring
-            return value[(__aca_title_end):]
+            rest_of_substring=value[:__aca_title_begin.start()]+value[__aca_title_end_2:]
+          #  print ("returning value:",rest_of_substring )
+            return rest_of_substring 
         print("No delimiter found for get_academic_title in: ", value)
     else:
-        dict['adcademic title'] = None
+        #dict['adcademic title'] = None
+        pass
     return value 
                 
     
 
 def get_birth_place_and_academic_title(value,dict):
+    loc=None
     __FROM_LEIPZIG=0
     __look_for_suffix=False
     __counter=0
@@ -108,18 +115,23 @@ def get_birth_place_and_academic_title(value,dict):
     if value.find('--') == -1:
         #print ("\n",value)
         #print ("jumping to certificate",dict['surname']," ",dict['prename'])
-        dict['additional_information_of_birthplace'] = None 
-        dict['birthplace'] = None
+        #dict['additional_information_of_birthplace'] = None 
+        #dict['birthplace'] = None
         return -2
     try:
         __substring=re.split(':',value,1)
         __substring=re.split('--',__substring[1],1)
         __substring=__substring[0]
-       
+        __birth_date_tmp=[]
+        __birth_date=None
+        __substring=check_for_date(__substring,__birth_date_tmp)
+        if len(__birth_date_tmp) != 0: 
+            __birth_date=__birth_date_tmp[0]
+
         __substring=get_academic_title(__substring,dict)
         #print ("rest 4 Birthplace: ",__substring)
         
-        __regex_4_add_information=r'(,)+|(\Wb.\W)+|(\Wb\W)+|(Bez.)+|(bez.)+'
+        __regex_4_add_information=r'(,)+|(\Wb.\W)+|(\Wb\W)+|(Bez.)+|(bez.)+|(\Wa.d.\W)+'
         __birthplace_delimiter = re.search(__regex_4_add_information,__substring)
         #print (__birthplace_delimiter )
 
@@ -131,15 +143,16 @@ def get_birth_place_and_academic_title(value,dict):
             __substring=__substring[:__birthplace_delimiter.start()]
             #print("__birthplace_delimiter.start(): ", __birthplace_delimiter.start() )
             __look_for_suffix=True
-        else:
-            list=check_for_date(__substring,__substring_additional_info )
-            __substring = list[0]
-            __substring_additional_info= list[1]  
-            __look_for_suffix = list[2]
+       # else:
+            #print ('...',__birth_date)
+        #__substring = list[0]
+        #__substring_additional_info= list[1]  
+        #__look_for_suffix = list[2]
             
            #print ("----+++++--------",__substring_additional_info) 
         #__substring = value[(__colon_place+1):]
-        __cut_prefix_string=r'(geb.)+|(aus)+|(in)'
+        #print ("brithplace: ",__substring)
+        __cut_prefix_string=r'(\Wgeb.\W)+|(\Waus\W)+|(\Win\W)|(\WAus\W)+'
 
         __substring= re.sub(__cut_prefix_string,'',__substring)
         __substring=__substring.strip()
@@ -148,45 +161,50 @@ def get_birth_place_and_academic_title(value,dict):
         list_leipzig_suburb=open('liste_leipziger_vororte_clean','r')
         for item in list_leipzig_suburb:
             if item.strip().lower() == __substring.lower():
-                dict['birthplace'] = {"name": "Leipzig"}
+                #dict['birthplace'] = {"name": "Leipzig"}
+                #__birthplace='Leipzig'
                 __look_for_suffix=True
                 __substring_additional_info=__substring
+                __substring='Leipzig'
                 __FROM_LEIPZIG=1         
         if not __FROM_LEIPZIG:
-               print('get location "' + __substring + '"...')
-               loc = geonames.Location.getLocation(__substring)
-                  
-               if(loc is None):
-                  dict['birthplace'] = {"name": __substring}
-               else:
-                  dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl()}
+            print('get location "' + __substring + '"...')
 
+            loc = geonames.Location.getLocation(__substring)
+    #           #loc = None
+
+            if __birth_date is not None:
+
+                if(loc is None):
+                    dict['birthplace'] = {"name": __substring,"birth_date": __birth_date}
+                else:
+                    dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl(), "birth_date": __birth_date}
+            else:
+                if(loc is None):
+                    dict['birthplace'] = {"name": __substring}
+                else:
+                    dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl()}
         if __look_for_suffix==True:
-            ##new substring    
-             
-            #__possible_suffix_string=r'(Bez.)+|(bez.)+|(b.)+|(b)+'             
-            #__possible_suffix=re.findall(__possible_suffix_string,__substring_additional_info)
             __substring_additional_info=re.sub(__regex_4_add_information,'',__substring_additional_info)
-            
-            #print () 
-            
-            #print ("__possible_suffix: ", __possible_suffix)
-            #if __possible_suffix:
-            # __substring_additional_info=__substring_additional_info[1:]
             __substring_additional_info=__substring_additional_info.strip()
-           
-            dict['additional_information_of_birthplace'] = __substring_additional_info
-            
+            #dict['additional_information_of_birthplace'] = __substring_additional_info
+            if __birth_date is not None:
+                if(loc is None):
+                    dict['birthplace'] = {"name": __substring,"birth_date": __birth_date ,"additional_information_of_birthplace": __substring_additional_info}
+                else:
+                    dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl(), "birth_date": __birth_date,"additional_information_of_birthplace": __substring_additional_info}
+            else:
+                if(loc is None):
+                    dict['birthplace'] = {"name": __substring,"additional_information_of_birthplace": __substring_additional_info}
+                else:
+                    dict['birthplace'] = {"source": __substring, "geonameId": loc.getGeonameId(),  "name": loc.getName(), "latitude": loc.getLat(), "longitude": loc.getLng(), "url": loc.getUrl(),"additional_information_of_birthplace": __substring_additional_info}
+
             return 2
-        else:
-            dict['additional_information_of_birthplace'] = None 
-       
-        #value_list.pop(__counter-1)
         
     except IndexError:
         #print("Did not found informations about birthplace \':\' ! ", file=sys.stderr)
-        dict['birthplace'] = None
-        dict['additional_information_of_birthplace'] = None
+        #dict['birthplace'] = None
+        #dict['additional_information_of_birthplace'] = None
         return -1
     return 1
 
@@ -220,7 +238,8 @@ def get_certificate(value,dict,jump_to_certificate ):
         __look_4_zeugnis = value.find(':')
         certificate = value[__look_4_zeugnis+1:].strip() 
     else:
-        certificate = None
+        #certificate = None
+        pass
 
     jsonCertifications = []
     for cert in ce.Certificate.getCertificates(certificate):
