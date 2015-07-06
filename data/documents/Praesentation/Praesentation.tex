@@ -67,8 +67,12 @@
  \end{enumerate}
 
  \vspace*{\fill}
- \begin{block}{Beispiel}
- \normalsize Namensbereich: persönliche Informationen-{}- Dokumente.-
+ \begin{block}{Beispiele}
+  \begin{itemize}
+   \normalsize
+   \item Namensbereich: persönliche Informationen-{}- Dokumente.-
+   \item Namensbereich: Dokumente.-
+  \end{itemize}
  \end{block}
 \end{frame} 
 
@@ -251,11 +255,92 @@
 
 \section{Quelldatenfehler}
  \subsection*{~}
+
 \begin{frame}{Fehler in den Ausgangsdaten}
  \begin{itemize}
-  \item bsp1
+  \item Zusätzlicher Mädchenname
+  \begin{block}{Beispiel}
+   \normalsize
+   von Garnier, Katharina: geb. Möwes, stud. philol., geb. in Berlin-{}-
+  \end{block}
+  
+  \vspace*{\fill}
+
+  \item Doppelter Herkunftsort
+  \begin{block}{Beispiel}
+   \normalsize
+   Golembiewski, Alexander: stud. oecon., aus Warschau, aus Kowal-{}-
+  \end{block}
+
  \end{itemize}
 \end{frame}
+
+
+\begin{frame}{Fehler in den Ausgangsdaten}
+ \begin{itemize}
+  \item Bestehende Anmerkungen  
+  \begin{block}{Beispiele}
+   \begin{itemize}
+    \normalsize
+    \item Pause, Erwin Adelbert (Albin?):
+    \vspace*{-0.25cm}
+    \item Sackellar (ios), Polyvius:
+    \vspace*{-0.25cm}
+    \item Rabinowicz, Heinrich: (aus Warschau?)-{}-
+   \end{itemize}      
+  \end{block}
+
+  \vspace*{\fill}  
+  
+  \item Falsche Struktur
+  \begin{block}{Beispiel}
+   \normalsize   
+   Schotsch, Gustav: aus Clausenburg: Abgangszeugnis Universitätsgericht Leipzig 1869
+  \end{block}
+  
+ \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Fehler in den Ausgangsdaten}
+ \begin{itemize}
+  \item Fehlerhafter Inhalt 
+  \begin{block}{Beispiele}
+   \begin{itemize}
+    \normalsize   
+    \item 1von Adamski, Josef: aus Warschau-{}-
+    \vspace*{-0.25cm} 
+    \item Jäneke, Johann Martin Eduard: aus Glauchau-{}- Matrikelscheine 1863, väterliche/vormu\textbackslash "{}\textbackslash n
+	\vspace*{-0.25cm}    
+    \item Mann, Conrad: stud. pharm., \textbackslash "{}Servestanuns\textbackslash "{}-{}- Matrikelscheine 1881
+   \end{itemize}
+  \end{block} 
+  
+ \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Fehler in den Ausgangsdaten}
+ \begin{itemize}
+  \item Abgeschnittene Bereiche
+  \begin{block}{Beispiel}
+   \begin{itemize}
+    \normalsize
+    \item R\textbackslash n
+	\vspace*{-0.25cm}    
+    \item Schrag, Emil Richard:\textbackslash n
+	\vspace*{-0.25cm}    
+    \item Legitimationskarte, Kollegienbuch, Entlastungsschein Universitätsbibliothek 1900, Abgangszeugnis Universität Leipzig 1900
+    \vspace*{-0.25cm}
+    \item Seyler, Georg: aus Harthau b. Bischofswerda-{}- Zuweisung zur Immat\textbackslash n
+   \end{itemize}
+  \end{block}
+  
+ \end{itemize}
+\end{frame}
+
+
+
 
 \section{Erweiterte Struktur}
  \subsection*{~}
@@ -305,9 +390,9 @@
  
 % \vspace*{\fill}
  \begin{block}{Erzeugtes JSON}
- \normalsize \{
- \newline
- \hspace*{0.5cm}"{}name"{}: "{}Leipzig"{},
+ \normalsize 
+% \newline
+\{ \hspace*{0.17cm}"{}name"{}: "{}Leipzig"{},
  \newline
  \hspace*{0.5cm}"{}latitude"{}: "{}51.33962"{},
  \newline
@@ -317,15 +402,18 @@
  \newline
  \hspace*{0.5cm}"{}url"{}: 
  \hspace*{0.5cm}"{}https://maps.google.de/maps?q=51.33962,12.37129"{}
- \newline
- \}
+ \hspace*{0.17cm}\}
  \end{block}
 \end{frame}
  
 
 \begin{frame}{zukünftige Verfahren}
  \begin{itemize}
-   \item 
+   \item Statistische Analysen für beispielsweise:
+   \begin{itemize}
+    \item
+    \item 
+   \end{itemize}
  \end{itemize}
 \end{frame}
 
