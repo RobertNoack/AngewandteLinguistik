@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.33pt}
 \select@language {german}
 \beamer@sectionintoc {2}{Einleitung}{3}{0}{1}
-\beamer@sectionintoc {3}{Strukturierung}{5}{0}{2}
-\beamer@sectionintoc {4}{Quelldatenfehler}{9}{0}{3}
-\beamer@sectionintoc {5}{Erweiterte Struktur}{10}{0}{4}
+\beamer@sectionintoc {3}{Strukturierung}{6}{0}{2}
+\beamer@sectionintoc {4}{Quelldatenfehler}{14}{0}{3}
+\beamer@sectionintoc {5}{Erweiterte Struktur}{18}{0}{4}

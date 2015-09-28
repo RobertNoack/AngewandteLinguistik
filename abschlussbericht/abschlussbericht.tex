@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+
+\usepackage[pdfborder={0 0 0}]{hyperref} %anklickbare links im text
+
+\usepackage[automark]{scrpage2} 	%kopfzeile
+\clearscrheadfoot
+\ihead{\headmark}		%links -> kapitelname
+\chead{}				%mitte -> leer
+\ohead{\pagemark} 		%rechts -> seitenzahl
+\setheadsepline{0.4pt}	%kopfzeile unterstrichen
+\pagestyle{scrheadings}	%kopfzeile erzeugen
+
+
+\title{Abschlussbericht}
+%Gruppe 8: Daten des Universitätsarchivs
+\author{Robert Noack, Stefan Schaub, Ramon Bernert}
+
+\begin{document}
+
+% Deckblatt
+\thispagestyle{empty}
+
+\vspace*{2cm}
+\begin{LARGE}
+
+\hspace*{1.2cm}\textbf{Anwendungen Linguistische}
+\newline
+\hspace*{4.5cm}\textbf{Informatik}
+
+\vspace*{0.8cm}
+\hspace*{2.8cm}\textbf{Abschlussbericht}
+
+\vspace*{1cm}
+Gruppe 8: Daten des Universitätsarchivs
+\end{LARGE}
+
+\vspace*{\fill}
+\begin{large}
+ \begin{tabular}{p{7cm} l}
+  Betreuer:		& Thomas Efer	\\
+\\
+  Bearbeiter: 	& Robert Noack 	\\
+				& Stefan Schaub \\
+				& Ramon Bernert \\
+ \end{tabular}
+\end{large}
+
+
+% Inhaltsverzeichnis
+\newpage
+\thispagestyle{empty}
+
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Seite}\par}
+
+% Haupttext 
+
+\newpage
+\setcounter{page}{1}
+
+\input{einleitung.tex}
+\input{ausgangsdaten.tex}
+\input{verwendetemethoden.tex}
+
+
+
+\newpage
+\section{Beispielstruktur}
+ \label{sec:Beispielstruktur}
+\{
+\newline
+\hspace*{0.5cm}
+"{}surname"{}: "{}Hahmann"{},
+\newline
+\hspace*{0.5cm}
+"{}prename"{}: "{}Friedrich August Adolf"{},
+\newline
+\hspace*{0.5cm}
+"{}adcademic title"{}: stud. Jur.,
+\newline
+\hspace*{0.5cm}
+"{}birthplace"{}: \{
+\newline
+\hspace*{1cm}
+"{}source"{}: "{}Ilfeld"{},
+\newline
+\hspace*{1cm}
+"{}name"{}: "{}Ilfeld"{},
+\newline
+\hspace*{1cm}
+"{}url"{}: "{}https://maps.google.de/maps?q=51.5757,10.78469"{},
+\newline
+\hspace*{1cm}
+"{}latitude"{}: "{}51.5757"{},
+\newline
+\hspace*{1cm}
+"{}longitude"{}: "{}10.78469"{},
+\newline
+\hspace*{1cm}
+"{}geonameId"{}: 2896592
+\newline
+\hspace*{0.5cm}
+\},
+\newline
+\hspace*{0.5cm}
+"{}additional\_information\_of\_birthplace"{}: "{}10.2.1848"{},
+\newline
+\hspace*{0.5cm}
+"{}certificate"{}: [
+\newline
+\hspace*{1cm}
+\{
+\newline
+\hspace*{1.5cm}
+"{}source"{}: "{}Reifezeugnis 1868"{},
+\newline
+\hspace*{1.5cm}
+"{}name"{}: "{}Reifezeugnis"{},
+\newline
+\hspace*{1.5cm}
+"{}type"{}: "{}Zeugnis"{},
+\newline
+\hspace*{1.5cm}
+"{}year"{}: "{}1868"{}
+\newline
+\hspace*{1cm}
+\},
+\newline
+\hspace*{1cm}
+\{
+\newline
+\hspace*{1.5cm}
+"{}source"{}: "{}Abgangszeugnis Universität Leipzig 1874"{},
+\newline
+\hspace*{1.5cm}
+"{}name"{}: "{}Abgangszeugnis Universität Leipzig"{},
+\newline
+\hspace*{1.5cm}
+"{}location"{}: \{
+\newline
+\hspace*{2cm}
+"{}name"{}: "{}Leipzig"{},
+\newline
+\hspace*{2cm}
+"{}latitude"{}: "{}51.33962"{},
+\newline
+\hspace*{2cm}
+"{}geonameId"{}: 2879139,
+\newline
+\hspace*{2cm}
+"{}longitude"{}: "{}12.37129"{},
+\newline
+\hspace*{2cm}
+"{}url"{}: "{}https://maps.google.de/maps?q=51.33962,12.37129"{}
+\newline
+\hspace*{1.5cm}
+\},
+\newline
+\hspace*{1.5cm}
+"{}type"{}: "{}Zeugnis"{},
+\newline
+\hspace*{1.5cm}
+"{}year"{}: "{}1874"{}
+\newline
+\hspace*{1cm}
+\}
+\newline
+\hspace*{0.5cm}
+],
+\newline
+\hspace*{0.5cm}
+"{}object\_under\_investigation"{}: "{}Hahmann, Friedrich August Adolf: stud. 
+\newline
+\hspace*{0.5cm}
+Jur., geb. Ilfeld 10.2.1848-{}- Reifezeugnis 1868, Abgangszeugnis Universität
+\newline
+\hspace*{0.5cm} 
+Leipzig 1874"{}
+\newline
+\}
+
+
+\newpage
+Anmerkungen:
+überflüssiges leerzeichen beim dokumentennamen in der auflistung ab dem 2. dokument
+
+problem bei der lokalisierung wen nicht spezifischen dokumenten
+Entlastungsschein Universitätsbibliothek 1892
+University Library - Freie Universität Berlin
+
+\end{document}
