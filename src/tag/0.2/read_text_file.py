@@ -186,7 +186,7 @@ def get_certificate(value,dict,jump_to_certificate ):
     for cert in ce.Certificate.getCertificates(certificate):
         loc = cert.getLocation()
 
-        jsonCert = {'source': cert.getSource(), 'name': cert.getName()}
+        jsonCert = {'source': cert.getSource().strip(), 'name': cert.getName()}
         if cert.getType() is not None:
             jsonCert['type'] = cert.getType()
         if cert.getYear() is not None:
