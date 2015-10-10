@@ -61,10 +61,13 @@ def get_academic_title(value,dict):
     __aca_title_begin = re.search(__regex_4_academic_title,value)
     if __aca_title_begin is not None:
         __aca_title_end = value.find(',')
+        #if __aca_title_end == -1: 
+        #    __aca_title_end_2 = value.find('aus')
+        #    if __aca_title_end_2 == -1:
+        #        __aca_title_end_2 = value.find('Aus')
         if __aca_title_end == -1: 
-            __aca_title_end_2 = value.find('aus')
-            if __aca_title_end_2 == -1:
-                __aca_title_end_2 = value.find('Aus')
+            __aca_title_end_2 = value.lower().find('aus')
+
         if __aca_title_end != -1:
             __substring = value[__aca_title_begin.start(): __aca_title_end]
             dict['academic_title'] = __substring
@@ -240,7 +243,7 @@ def fill_dict(textfile_object):
 
 if __name__ == '__main__':
     dictionary_list = []
-    __file_to_read='personendaten.txt'
+    __file_to_read='personendaten2.txt'
     __file_name=re.sub('\.txt','',__file_to_read)
     file_object = open(__file_to_read, 'r')
     for line in file_object:
