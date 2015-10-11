@@ -64,7 +64,7 @@ class Certificate(object):
 				if(len(temp) > 3):
 					loc = geonames.Location.getLocation(temp)
 					if(loc is not None):
-						#print(part + ' => ' + loc.getName())
+						print(part + ' => ' + loc.getName() + '\ttmp:' + temp )
 						cert.setLocation(loc)
 			
 			temp = part.lower()

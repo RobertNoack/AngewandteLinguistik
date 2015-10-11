@@ -61,10 +61,6 @@ def get_academic_title(value,dict):
     __aca_title_begin = re.search(__regex_4_academic_title,value)
     if __aca_title_begin is not None:
         __aca_title_end = value.find(',')
-        #if __aca_title_end == -1: 
-        #    __aca_title_end_2 = value.find('aus')
-        #    if __aca_title_end_2 == -1:
-        #        __aca_title_end_2 = value.find('Aus')
         if __aca_title_end == -1: 
             __aca_title_end_2 = value.lower().find('aus')
 
@@ -232,9 +228,6 @@ def fill_dict(textfile_object):
         get_certificate(listitem,dict,jump_to_certificate) 
         list_of_dicts.append(dict)
         dict['object_under_onvestigation'] = listitem 
-        if org_listitem != listitem:
-            print("!!!! CHANGED LISTITEM!!! ",listitem , file=sys.stderr)
-            sys.exit 
         del dict
 
     return list_of_dicts
