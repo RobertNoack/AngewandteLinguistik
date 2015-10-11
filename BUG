@@ -1,0 +1,69 @@
+Folgendes Problem: Habe den Code eine wenig verändern wollen zur besseren lesbarkeit! Dann habe ich mir ein tool geschrieben, dass die Ausgaben vergleicht um sicherzusetllen, dass ich nicht wesentliches 
+verändert habe. Führe ich nun unser Programm 2x aus. Kommt eigentlich immer ein Fehler!
+
+1.Durchlauf:
+
+{
+    "surname": "Ahnemüller",
+    "prename": "Gottlob Wilhelm",
+    "academic_title": "stud. Chirurg.",
+    "birthplace": {
+      "geonameId": 2946172,
+      "url": "https://maps.google.de/maps?q=51.12416,12.49639",
+      "source": "Borna",
+      "longitude": "12.49639",
+      "latitude": "51.12416",
+      "name": "Borna"
+    },
+    "certificate": [
+      {
+        "year": "1842",
+        "type": "Zeugnis",
+        "name": "Abgangszeugnis Universitätsgericht Leipzig",
+        "source": "Abgangszeugnis Universitätsgericht Leipzig 1842",
+        "location": {
+          "geonameId": 2879139,
+          "url": "https://maps.google.de/maps?q=51.33962,12.37129",
+          "longitude": "12.37129",
+          "latitude": "51.33962",
+          "name": "Leipzig"
+        }
+      }
+    ],
+    "object_under_onvestigation": "Ahnemüller, Gottlob Wilhelm: stud. Chirurg., aus Borna-- Abgangszeugnis Universitätsgericht Leipzig 1842"
+
+
+   2. Durchlauf:
+
+     {
+    "surname": "Ahnemüller",
+    "prename": "Gottlob Wilhelm",
+    "academic_title": "stud. Chirurg.",
+    "birthplace": {
+      "latitude": "51.12416",
+      "geonameId": 2946172,
+      "url": "https://maps.google.de/maps?q=51.12416,12.49638",
+      "source": "Borna",
+      "longitude": "12.49638",
+      "name": "Borna"
+    },
+    "certificate": [
+      {
+        "type": "Zeugnis",
+        "source": "Abgangszeugnis Universitätsgericht Leipzig 1842",
+        "location": {
+          "latitude": "51.33962",
+          "url": "https://maps.google.de/maps?q=51.33962,12.37129",
+          "longitude": "12.37129",
+          "geonameId": 2879139,
+          "name": "Leipzig"
+        },
+        "year": "1842",
+        "name": "Abgangszeugnis Universitätsgericht Leipzig"
+      }
+    ],
+    "object_under_onvestigation": "Ahnemüller, Gottlob Wilhelm: stud. Chirurg., aus Borna-- Abgangszeugnis Universitätsgericht Leipzig 1842"
+
+
+man sieht z.b., dass der Längengrad sich minimal bei Borna unterscheidet...
+Wie wollen wir das handeln? 
