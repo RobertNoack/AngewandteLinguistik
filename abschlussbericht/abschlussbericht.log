@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.12)  12 OCT 2015 16:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.12)  12 OCT 2015 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -850,7 +850,7 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 15.
 
 [3]) (./geotags.tex
-Overfull \hbox (10.57558pt too wide) in paragraph at lines 23--1
+Overfull \hbox (10.57558pt too wide) in paragraph at lines 19--1
 []\T1/lmr/m/n/12 Wurden al-le Wer-te in al-len Sets ge-le-sen wer-den die-se mi
 t-tels der "json.dump"
  []
@@ -966,7 +966,7 @@ ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on abschlussbericht.pdf (9 pages, 182114 bytes).
+Output written on abschlussbericht.pdf (9 pages, 182243 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  142 compressed objects within 2 object streams
