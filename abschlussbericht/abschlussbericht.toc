@@ -9,5 +9,5 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Dokumente}{2}{subsubsection.2.2.3}
 \contentsline {section}{\numberline {3}Verwendete Methoden}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}denkdirwasaus1}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}denkdirwasaus2}{4}{subsection.3.2}
-\contentsline {section}{\numberline {4}Beispielstruktur}{5}{section.4}
+\contentsline {subsection}{\numberline {3.2}Ortsbestimmung}{5}{subsection.3.2}
+\contentsline {section}{\numberline {4}Beispielstruktur}{7}{section.4}
