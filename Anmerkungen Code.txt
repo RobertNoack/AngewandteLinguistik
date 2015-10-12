@@ -105,6 +105,11 @@ Generelle Fehler:
  8218	"object_under_onvestigation": "Starke, Georg Paul: -- Reifezeugnis 1865, väterliche/vormundschaftliche Studiengenehmigung 1865, polizeiliches Führungszeugnis 1870, Abgangszeugnis Universitätsgericht Leipzig 1870"
  8459	"object_under_onvestigation": "Reifezeugnis 1874, Berufszeugnis 1876, Abgangszeugnis Universität Halle-Wittenberg 1876"
  
+
+"source": " Matrikelscheine 1869 u. 1874",
+        "name": "Matrikelscheine 1869 u",
+        "type": "Schein",
+        "year": "1874"
  
 
 

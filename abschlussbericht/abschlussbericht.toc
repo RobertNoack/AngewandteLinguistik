@@ -7,4 +7,7 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Namensbereich}{2}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Pers\IeC {\"o}nliche Informationen}{2}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Dokumente}{2}{subsubsection.2.2.3}
-\contentsline {section}{\numberline {3}Beispielstruktur}{4}{section.3}
+\contentsline {section}{\numberline {3}Verwendete Methoden}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}denkdirwasaus1}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}denkdirwasaus2}{4}{subsection.3.2}
+\contentsline {section}{\numberline {4}Beispielstruktur}{5}{section.4}
