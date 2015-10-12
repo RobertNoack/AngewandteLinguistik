@@ -18,6 +18,8 @@
 \setheadsepline{0.4pt}	%kopfzeile unterstrichen
 \pagestyle{scrheadings}	%kopfzeile erzeugen
 
+\usepackage{verbatim}
+
 %JSON-Listing
 \usepackage{listings}
 \usepackage{xcolor}
@@ -115,6 +117,8 @@
 \newpage
 \section{Beispielstruktur}
  \label{sec:Beispielstruktur}
+ 
+\begin{comment} 
 \{
 \newline
 \hspace*{0.5cm}
@@ -227,6 +231,54 @@ Leipzig 1874"{}
 \newline
 \}
 
+\end{comment}
+
+%beispielstruktur update
+
+\begin{footnotesize}
+
+\enlargethispage{\baselineskip}
+%\addtolength{\textwidth}{5cm}
+\begin{lstlisting}[language=JSON]
+{
+  "surname": "Hahmann",
+  "prename": "Friedrich August Adolf",
+  "adcademic title": stud. Jur.,
+  "birthplace": {
+    "source": "Ilfeld",
+    "name": "Ilfeld",
+    "url": "https://maps.google.de/maps?q=51.5757,10.78469",
+    "latitude": "51.5757",
+    "longitude": "10.78469",
+    "geonameId": 2896592
+  },
+  "additional_information_of_birthplace": "10.2.1848",
+  "certificate": [
+    {
+      "source": "Reifezeugnis 1868",
+      "name": "Reifezeugnis",
+      "type": "Zeugnis",
+      "year": "1868"
+    },
+    {
+      "source": "Abgangszeugnis Universitaet Leipzig 1874",
+      "name": "Abgangszeugnis Universitaet Leipzig",
+      "location": {
+        "name": "Leipzig",
+        "latitude": "51.33962",
+        "geonameId": 2879139,
+        "longitude": "12.37129",
+        "url": "https://maps.google.de/maps?q=51.33962,12.37129"
+      },
+      "type": "Zeugnis",
+      "year": "1874"
+    }
+  ],
+  "object_under_investigation": "Hahmann, Friedrich August Adolf: stud. Jur., geb. Ilfeld 10.2.1848-- Reifezeugnis 1868, Abgangszeugnis Universitaet Leipzig 1874"
+}
+\end{lstlisting}
+
+\end{footnotesize}
 
 %problem bei der lokalisierung wen nicht spezifischen dokumenten
 %Entlastungsschein Universitätsbibliothek 1892
