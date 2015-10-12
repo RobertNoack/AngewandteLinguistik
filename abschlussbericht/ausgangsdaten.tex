@@ -1,2 +1,79 @@
-\section{Ausgangsdaten}
- \label{sec:Ausgangsdaten}
+\section{Datenherkunft und interne Struktur}
+ \label{sec:Datenherkunft und interne Struktur}
+ 
+\subsection{Datenherkunft}
+ \label{subsec:Datenherkunft}
+ 
+Wie bereits erwähnt, handelt es sich bei den Daten um Personendaten des Universitätsarchives der Universität Leipzig. Die Personendaten stammen hauptsächlich aus dem 19. und 20. Jahrhundert. In dieser Zeit war es üblich, persönliche Dokumente die für ein Studium benötigt wurden bei der Universität einzureichen. Diese wurden dann so lange aufbewahrt, bis die Person ihren Abschluss erlangt hat und alle offenen Rechnungen bezahlt hatte. Neben den typischen Personendaten wie Name, Geburtstag, Geburtsort, etc. enthalten die uns vorliegenden Daten eine Liste mit den personenspezifischen Dokumenten. Diese wird derzeit aber nur als einfacher Fließtext dargestellt.
+
+\subsection{Interne Struktur} 
+ \label{subsec:Interne Struktur}
+ 
+Die Grundstruktur der vorliegenden Daten ist relativ einfach gehalten. Sie besteht derzeit aus drei Bereichen die durch verschiedene Zeichenketten voneinander getrennt sind. Dabei handelt es sich um einen Namensbereich, persönliche Informationen und eine Liste der zuvor erwähnten Dokumente. Die am häufigsten auftretende Struktur ist die folgende: 
+
+\begin{itemize}
+ \item Namensbereich: persönliche Informationen-{}- Dokumente.-
+\end{itemize}
+
+\noindent
+Hierbei sieht man, dass die einzelnen Bereiche eindeutig durch die Zeichenketten "{}:"{}, "{}-{}-"{} und "{}.-"{} getrennt sind. Jedoch kann es vorkommen, dass bei einzelnen Personen einer dieser Bereiche fehlt. Dadurch verändert sich auch die Struktur. Beispielsweise kann es dabei zu Strukturen wie
+
+\begin{itemize}
+ \item Namensbereich: Dokumente.-
+\end{itemize}
+
+\noindent
+kommen. Unser Programm erkennt diese Probleme und konvertiert die Daten in die korrekte Form. Nicht vorhandene Bereiche werden somit in der späteren Struktur auch weggelassen. Ein Beispiel für eine komplette Struktur lässt sich auf Seite \pageref{sec:Beispielstruktur} finden. Zunächst werden wir aber auf die möglichen Inhalte der einzelnen Textbereiche eingehen.
+
+\subsubsection{Namensbereich}
+ \label{subsubsec:Namensbereich}
+
+Der Namensbereich ist relativ simpel gehalten. Er hat fast immer die folgende Struktur: 
+
+\begin{itemize}
+ \item Nachname, Vorname$_1$ Vorname$_2$ ... Vorname$_n$:
+\end{itemize} 
+ 
+\subsubsection{Persönliche Informationen}
+ \label{subsubsec:Persönliche Informationen}
+ 
+Die persönlichen Informationen variieren da schon deutlich häufiger. Sie enthalten zunächst (falls vorhanden) den akademischen Grad der Person. Dieser ist durch das Kürzel "{}stud."{} einfach zu erkennen. Neben dem akademischen Grad werden auch Informationen zur Herkunft der Person angegeben. Dazu gehören das Geburtsdatum sowie der Geburtsort. Diese sind durch das Kürzel "{}geb."{} gekennzeichnet. Format und Reihenfolge dieser variiert aber stark. In manchen Fällen wird beispielsweise nur "{}aus Leipzig"{} angegeben. Folgende Kombinationen sind beispielsweise Möglich: 
+
+\begin{itemize}
+ \item stud. oecon., geb. Kiel 5.9.1897-{}-
+\vspace*{-0.2cm} 
+ \item geb. 5.7.1860 in  Zöblitz-{}-
+\vspace*{-0.2cm} 
+ \item aus Saalfeld-{}-
+\end{itemize} 
+  
+\subsubsection{Dokumente}  
+ \label{subsubsec:Dokumente}
+
+Die Dokumente sind meist nur eine einfache Auflistung mit der Struktur:
+
+\begin{itemize}
+ \item Dokument$_1$, Dokument$_2$, ..., Dokument$_n$.-
+\end{itemize}
+
+\noindent
+Zu manchen dieser Dokumente wird außerdem das Ausstellungsjahr angegeben. Um jedoch eine bessere Analyse für die statistische Verteilung der Dokumententypen zu ermöglichen, weisen wir dem Dokument ein Tag mit seinem Dokumententyp zu. So erhält das Dokument "{}Abschlusszeugnis"{} den zusätzlichen Tag "{}Zeugnis"{}. Mögliche Tags wurden von uns manuell aus den vorliegenden Daten extrahiert. Dabei sind folgende mögliche Tags aufgetreten: 
+
+\begin{itemize}
+\vspace*{-0.2cm}
+ \item Zeugnis
+\vspace*{-0.2cm}
+ \item Buch
+\vspace*{-0.2cm} 
+ \item Schein
+\vspace*{-0.2cm} 
+ \item Protokoll
+\vspace*{-0.2cm} 
+ \item Genehmigung
+\vspace*{-0.2cm} 
+ \item Zuweisung
+\vspace*{-0.2cm} 
+ \item Diplom
+\vspace*{-0.2cm} 
+ \item Quittung
+\end{itemize}
