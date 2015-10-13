@@ -215,13 +215,24 @@ def academic_title(value_string,dict):
     __substring=__substring[:1]
     __substring=re.split('--',__substring[1],1)
 
+def check_for_begin(line):
+    mat = re.search('[A-Za-z]*\s?,\s?[A-Za-z]*\s?[A-Za-z]*\s?[A-Za-z]*:',line)
+    print (line)
+    if mat:
+        begin = mat.start()
+        print ("++++++")
+        return line[begin:]
+
+    else:
+        print ("-----")
+        return -1
+
 def fill_dict(textfile_object):
     jump_to_certificate = 0
     list_of_dicts = []
     data_set_array=get_data_sets(textfile_object)
 
     for listitem in data_set_array:
-        
         dict = collections.OrderedDict()
         org_listitem = listitem
         getting_name(listitem,dict)
@@ -241,5 +252,8 @@ if __name__ == '__main__':
     __file_name=re.sub('\.txt','',__file_to_read)
     file_object = open(__file_to_read, 'r')
     for line in file_object:
+        line = check_for_begin (line)
+        if line == -1:
+            continue
         dictionary_list.append(fill_dict(line))
     to_json(dictionary_list,__file_name+'.json')
