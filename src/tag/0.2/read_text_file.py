@@ -220,11 +220,9 @@ def check_for_begin(line):
     print (line)
     if mat:
         begin = mat.start()
-        print ("++++++")
         return line[begin:]
 
     else:
-        print ("-----")
         return -1
 
 def fill_dict(textfile_object):
