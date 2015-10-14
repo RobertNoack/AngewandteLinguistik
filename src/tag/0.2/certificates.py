@@ -50,6 +50,9 @@ class Certificate(object):
 		for part in value.split(','):
 			cert = Certificate(part)
 
+			if(';' in part):
+				part = part[:part.find(';')]
+
 			match = re.match(r'.*(\d{4}([/]\d{2})*).*', part)
 
 			if match:
