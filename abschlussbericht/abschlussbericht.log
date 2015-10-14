@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.30)  14 OCT 2015 14:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.30)  14 OCT 2015 15:06
 entering extended mode
 **abschlussbericht.tex
 
@@ -723,13 +723,19 @@ l.66  \item B
 etemethoden.tex
 (C:\Users\Robert\Documents\GitHub\AngewandteLinguistik\abschlussbericht\pythonc
 ode_stefan.tex
+Overfull \hbox (12.30531pt too wide) in paragraph at lines 8--9
+\T1/lmr/m/n/12 und "--" be-en-det wird. Durch Funk-ti-on "get_birth_place_and_a
+cademic_title"
+ []
+
+
 Overfull \vbox (2.60004pt too high) has occurred while \output is active []
 
 
 [3])
 (C:\Users\Robert\Documents\GitHub\AngewandteLinguistik\abschlussbericht\geotags
 .tex
-Overfull \hbox (10.57558pt too wide) in paragraph at lines 19--1
+Overfull \hbox (10.57558pt too wide) in paragraph at lines 17--1
 []\T1/lmr/m/n/12 Wurden al-le Wer-te in al-len Sets ge-le-sen wer-den die-se mi
 t-tels der "json.dump"
  []
@@ -787,7 +793,7 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files
 ype1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /lm/lmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.
 pfb>
-Output written on abschlussbericht.pdf (9 pages, 235121 bytes).
+Output written on abschlussbericht.pdf (9 pages, 235153 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  71 named destinations out of 1000 (max. 500000)
