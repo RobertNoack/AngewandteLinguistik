@@ -198,7 +198,7 @@ def get_certificate(value,dict,jump_to_certificate ):
 
     dict['certificate'] = jsonCertifications
 
-def getting_name(value_list,dict):
+def get_name(value_list,dict):
     """ get everything before the colon """
     __substring = re.split(':',value_list, 1)
 
@@ -217,7 +217,7 @@ def academic_title(value_string,dict):
 
 def check_for_begin(line):
     mat = re.search('[A-Za-z]*\s?,\s?[A-Za-z]*\s?[A-Za-z]*\s?[A-Za-z]*:',line)
-    print (line)
+    #print (line)
     if mat:
         begin = mat.start()
         return line[begin:]
@@ -233,7 +233,7 @@ def fill_dict(textfile_object):
     for listitem in data_set_array:
         dict = collections.OrderedDict()
         org_listitem = listitem
-        getting_name(listitem,dict)
+        get_name(listitem,dict)
         jump_to_certificate = get_birth_place_and_academic_title(listitem,dict)
         get_certificate(listitem,dict,jump_to_certificate) 
         list_of_dicts.append(dict)
@@ -246,7 +246,7 @@ def fill_dict(textfile_object):
 
 if __name__ == '__main__':
     dictionary_list = []
-    __file_to_read='personendaten2.txt'
+    __file_to_read='personendaten.txt'
     __file_name=re.sub('\.txt','',__file_to_read)
     file_object = open(__file_to_read, 'r')
     for line in file_object:
